@@ -1,0 +1,19 @@
+ugg Add up a pile and find the biggest thing in it.
+grunk numbers = snorf(4, 8, 15, 16, 23, 42)
+
+grunk total = 0
+zoop n in numbers
+    total = total + n
+unga
+
+oga "How many:", nom(numbers)
+oga "Total:", total
+oga "Average:", total / nom(numbers)
+
+grunk biggest = numbers[0]
+zoop n in numbers
+    binga n > biggest
+        biggest = n
+    unga
+unga
+oga "Biggest:", biggest

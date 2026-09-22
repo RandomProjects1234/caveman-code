@@ -1,0 +1,19 @@
+ugg booga does things many times.
+booga 3
+    oga "BOOGA!"
+unga
+
+grunk n = 1
+booga 4
+    oga "lap number", n
+    n = n + 1
+unga
+
+ugg The magic box 'lap' knows which lap you are on.
+booga 2
+    oga "this is lap", lap
+unga
+
+booga 2 + 3
+    oga "five laps!"
+unga

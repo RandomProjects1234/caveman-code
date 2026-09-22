@@ -1,0 +1,10 @@
+ugg munga makes magic random numbers.
+ugg munga(1, 1) is always 1, so this example gives the same answer every time.
+grunk dice = munga(1, 1)
+oga "The test dice rolled", dice
+
+grunk low = munga(5, 5)
+grunk high = munga(9, 9)
+oga "low:", low, "high:", high
+
+ugg Ask for a different range to make it random for real!

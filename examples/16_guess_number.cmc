@@ -1,0 +1,19 @@
+ugg no-check -- this is a game for a real person to play!
+grunk secret = munga(1, 10)
+grunk tries = 0
+grunk guess = 0
+
+oga "I am thinking of a number from 1 to 10!"
+
+zug guess != secret
+    grunk answer = blorp "Your guess?"
+    guess = numba(answer)
+    tries = tries + 1
+    binga guess < secret
+        oga "Bigger!"
+    wonga binga guess > secret
+        oga "Smaller!"
+    unga
+unga
+
+oga "Yes! You got it in", tries, "tries."

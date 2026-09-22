@@ -1,0 +1,13 @@
+ugg Paint a tiny cave scene.
+skrib size 500, 400
+skrib color "skyblue"
+skrib blob 0, 0, 500, 300
+skrib color "gold"
+skrib dot 400, 80, 40
+skrib color "green"
+skrib blob 0, 300, 500, 100
+skrib color "brown"
+skrib blob 150, 200, 120, 130
+skrib color "black"
+skrib write "the first cave painting", 30, 370
+oga "Cave painting drawn!"

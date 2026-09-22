@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheat sheet - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a class="active" href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>One page with everything. Print it, tape it to the cave wall.</p>
+<h2>Talking</h2>
+<table><thead><tr><th>Write this</th><th>It does</th></tr></thead><tbody><tr><td><code>oga &lt;things&gt;, &lt;things&gt;</code></td><td>print on one line</td></tr><tr><td><code>blorp "question"</code></td><td>ask the person, answer comes back as text</td></tr><tr><td><code>ugg anything</code></td><td>a note, ignored by the computer</td></tr></tbody></table>
+<h2>Boxes</h2>
+<table><thead><tr><th>Write this</th><th>It does</th></tr></thead><tbody><tr><td><code>grunk x = 5</code></td><td>make a new box</td></tr><tr><td><code>x = 6</code></td><td>change an existing box</td></tr><tr><td><code>x = x + 1</code></td><td>change it using its old value</td></tr><tr><td><code>gronk</code> / <code>nork</code></td><td>yes / no</td></tr><tr><td><code>plop</code></td><td>nothing</td></tr><tr><td><code>pi</code></td><td>3.14159...</td></tr><tr><td><code>lap</code></td><td>which <code>booga</code> lap you are on (magic)</td></tr></tbody></table>
+<h2>Choices</h2>
+<pre><code class="lang-cmc">binga check
+    ...
+wonga
+    ...
+unga</code></pre>
+<pre><code class="lang-cmc">binga check
+    ...
+wonga binga other_check
+    ...
+wonga
+    ...
+unga</code></pre>
+<h2>Logic</h2>
+<p><code>and</code> &amp;nbsp; <code>or</code> &amp;nbsp; <code>not</code> &amp;nbsp; <code>==</code> &amp;nbsp; <code>!=</code> &amp;nbsp; <code>&lt;</code> &amp;nbsp; <code>&lt;=</code> &amp;nbsp; <code>&gt;</code> &amp;nbsp; <code>&gt;=</code> &amp;nbsp; <code>in</code> &amp;nbsp; <code>not in</code></p>
+<h2>Loops</h2>
+<table><thead><tr><th>Write this</th><th>It does</th></tr></thead><tbody><tr><td><code>booga 5</code> ... <code>unga</code></td><td>do it 5 times, <code>lap</code> counts 1..5</td></tr><tr><td><code>zug x &lt; 10</code> ... <code>unga</code></td><td>while the check is gronk</td></tr><tr><td><code>zoop thing in pile</code> ... <code>unga</code></td><td>once per thing in a pile or text</td></tr></tbody></table>
+<h2>Clumps (functions)</h2>
+<pre><code class="lang-cmc">clump name(a, b)
+    oga a
+    ork a + b
+unga
+
+oga name(1, 2)</code></pre>
+<h2>Piles (lists)</h2>
+<table><thead><tr><th>Write this</th><th>It does</th></tr></thead><tbody><tr><td><code>snorf(1, 2, 3)</code></td><td>make a pile</td></tr><tr><td><code>snorf()</code></td><td>empty pile</td></tr><tr><td><code>plop(pile, x)</code></td><td>add x to the end</td></tr><tr><td><code>nom(x)</code></td><td>how many</td></tr><tr><td><code>pile[0]</code></td><td>first thing (spots start at 0)</td></tr><tr><td><code>pile[-1]</code></td><td>last thing</td></tr><tr><td><code>skoop(pile, 2)</code></td><td>same as <code>pile[2]</code></td></tr><tr><td><code>yoink(pile)</code></td><td>take the last thing off</td></tr><tr><td><code>pile[1] = 9</code></td><td>change a spot</td></tr><tr><td><code>x in pile</code></td><td>is x inside?</td></tr></tbody></table>
+<h2>Text</h2>
+<p><code>shout(t)</code> <code>whisper(t)</code> <code>flip(t)</code> <code>find(t, piece)</code> <code>split(t, sep)</code> <code>join(pile, sep)</code> <code>goop(x)</code> <code>nom(t)</code> <code>skoop(t, i)</code> <code>t[i]</code></p>
+<h2>Numbers</h2>
+<p><code>round(x)</code> <code>flat(x)</code> <code>roof(x)</code> <code>abs(x)</code> <code>small(a,b)</code> <code>big(a,b)</code> <code>root(x)</code> <code>pow(a,b)</code> <code>munga(a,b)</code> <code>numba(text)</code></p>
+<h2>Drawing</h2>
+<table><thead><tr><th>Write this</th><th>It does</th></tr></thead><tbody><tr><td><code>skrib size 400, 400</code></td><td>set picture size</td></tr><tr><td><code>skrib color "red"</code></td><td>pick a color (names or <code>"#ff8800"</code>)</td></tr><tr><td><code>skrib dot x, y, r</code></td><td>filled circle</td></tr><tr><td><code>skrib circle x, y, r</code></td><td>outline circle</td></tr><tr><td><code>skrib line x1, y1, x2, y2</code></td><td>a line</td></tr><tr><td><code>skrib box x, y, w, h</code></td><td>outline rectangle</td></tr><tr><td><code>skrib blob x, y, w, h</code></td><td>filled rectangle</td></tr><tr><td><code>skrib write "words", x, y</code></td><td>text on the picture</td></tr><tr><td><code>skrib clear</code></td><td>wipe the picture</td></tr><tr><td><code>wait(500)</code></td><td>pause half a second</td></tr></tbody></table>
+<p>The spot <code>0, 0</code> is the top-left corner.</p>
+<h2>English mode</h2>
+<p>Every CMC word has an English twin you can mix in freely:</p>
+<table><thead><tr><th>CMC</th><th>English</th></tr></thead><tbody><tr><td>oga</td><td>print, say</td></tr><tr><td>grunk</td><td>let, make</td></tr><tr><td>binga</td><td>if</td></tr><tr><td>wonga</td><td>else</td></tr><tr><td>unga</td><td>end, done, finish</td></tr><tr><td>booga</td><td>repeat</td></tr><tr><td>zug</td><td>while</td></tr><tr><td>zoop</td><td>for</td></tr><tr><td>clump</td><td>fn, function, def</td></tr><tr><td>ork</td><td>return, give</td></tr><tr><td>blorp</td><td>ask</td></tr><tr><td>skrib</td><td>draw</td></tr><tr><td>ugg</td><td>comment</td></tr><tr><td>gronk</td><td>true</td></tr><tr><td>nork</td><td>false</td></tr><tr><td>plop</td><td>nothing</td></tr></tbody></table>
+<h2>The shape of a program</h2>
+<pre><code class="lang-cmc">ugg notes at the top
+grunk boxes...
+clump helpers...
+ugg the actual work
+booga / binga / zoop blocks
+oga answers</code></pre>
+<h2>Terminal commands</h2>
+<pre><code class="lang-text">cmc                     talk to CMC (REPL)
+cmc run hello.cmc       run a program
+cmc compile hello.cmc   make hello.py
+cmc init hello.cmc      make a starter program
+cmc examples            list example programs</code></pre>
+<h2>OGABOOGA CODER keys</h2>
+<p><code>F5</code> run &amp;nbsp; <code>Esc</code> stop &amp;nbsp; <code>Ctrl+S</code> save &amp;nbsp; <code>Ctrl+O</code> open &amp;nbsp; <code>Ctrl+N</code> new &amp;nbsp; <code>Ctrl+Z</code> undo blocks</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

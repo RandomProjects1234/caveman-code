@@ -1,0 +1,13 @@
+ugg Text helpers: goop, shout, whisper, flip, split, join, what.
+grunk rocks = 7
+
+oga "I am " + goop(rocks) + " years old"
+oga shout("ugg")
+oga whisper("VERY LOUD")
+oga flip("booga")
+oga "length of cave:", nom("cave")
+oga "find man in caveman:", find("caveman", "man")
+oga "find z in caveman:", find("caveman", "z")
+oga split("rock,paper,scissors", ",")
+oga join(snorf(1, 2, 3), " -> ")
+oga what(3), what("hi"), what(gronk), what(plop)

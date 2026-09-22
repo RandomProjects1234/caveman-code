@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="wiki/index.html">Wiki</a>
+    <a href="download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="wiki/install.html">Installing CMC</a></li>
+<li><a href="wiki/getting-started.html">Getting started</a></li>
+<li><a href="wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="wiki/values-and-types.html">Values and types</a></li>
+<li><a href="wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="wiki/loops.html">Loops</a></li>
+<li><a href="wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="wiki/lists.html">Piles (lists)</a></li>
+<li><a href="wiki/text.html">Text (goop)</a></li>
+<li><a href="wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="wiki/english-mode.html">English mode</a></li>
+<li><a href="wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="wiki/examples.html">Example programs</a></li>
+<li><a href="wiki/faq.html">FAQ</a></li>
+<li><a href="wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="wiki/roadmap.html">Roadmap</a></li>
+<li><a href="wiki/changelog.html">Changelog</a></li>
+<li><a href="wiki/contributing.html">Contributing</a></li>
+<li><a href="wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+
+<h1>Download Cave Man Code</h1>
+<p>CMC is free, tiny, and runs on any computer with Python 3.9 or newer.
+Everything you need is in one zip: the compiler, OGABOOGA CODER, all examples, and the docs.</p>
+<div class="cards">
+<div class="card"><h3>CMC-Compiler-v0.1.0</h3><p>Ready to run. Unzip it anywhere and double-click the launcher.</p><a class="button" href="downloads/CMC-Compiler-v0.1.0.zip" download>Download CMC-Compiler-v0.1.0.zip</a></div>
+<div class="card"><h3>CaveManCode-v0.1.0</h3><p>Ready to run. Unzip it anywhere and double-click the launcher.</p><a class="button" href="downloads/CaveManCode-v0.1.0.zip" download>Download CaveManCode-v0.1.0.zip</a></div>
+<div class="card"><h3>OGABOOGA-CODER-v0.1.0</h3><p>Ready to run. Unzip it anywhere and double-click the launcher.</p><a class="button" href="downloads/OGABOOGA-CODER-v0.1.0.zip" download>Download OGABOOGA-CODER-v0.1.0.zip</a></div>
+</div>
+<h2>How to install (Windows)</h2>
+<pre><code>1. Download a zip above and right-click -> Extract All...
+2. Open the extracted folder.
+3. Double-click run_ogabooga.bat  (or cmc_run.bat to run programs in a terminal)</code></pre>
+<h2>How to install (macOS / Linux)</h2>
+<pre><code>unzip CMC-Compiler-v0.1.0.zip
+cd caveman-code
+PYTHONPATH=src python3 -m cmc run examples/01_hello_oga.cmc
+PYTHONPATH=src python3 -m ogabooga</code></pre>
+<h2>What is inside</h2>
+<table>
+<thead><tr><th>File</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>src/cmc/</td><td>the compiler (lexer, parser, interpreter, Python generator)</td></tr>
+<tr><td>src/ogabooga/</td><td>OGABOOGA CODER, the IDE with the compiler inside</td></tr>
+<tr><td>run_ogabooga.bat</td><td>starts the IDE on Windows</td></tr>
+<tr><td>cmc_run.bat</td><td>drag any .cmc file onto it to run it</td></tr>
+<tr><td>examples/</td><td>31 example programs from hello world to recursion</td></tr>
+<tr><td>docs/</td><td>the full manual</td></tr>
+</tbody>
+</table>
+<h2>Make your own .exe (optional)</h2>
+<p>If you want a stand-alone <code>OgaboogaCoder.exe</code> with no Python installed,
+use the included PyInstaller script:</p>
+<pre><code>pip install pyinstaller
+powershell -File tools/build_exe.ps1</code></pre>
+<h2>System needed</h2>
+<ul>
+<li>Python 3.9 or newer (tkinter comes with the normal installer)</li>
+<li>Windows, macOS, or Linux</li>
+<li>About 5 MB of space, no internet needed after download</li>
+</ul>
+
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

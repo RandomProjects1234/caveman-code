@@ -1,0 +1,16 @@
+ugg ork gives an answer back from a clump.
+clump add(a, b)
+    ork a + b
+unga
+
+clump double(n)
+    ork n * 2
+unga
+
+clump shout_name(name)
+    ork shout(name) + "!"
+unga
+
+oga add(2, 3)
+oga double(add(1, 4))
+oga shout_name("ugg")

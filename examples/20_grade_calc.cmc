@@ -1,0 +1,22 @@
+ugg Grades and clumps that give back answers.
+grunk score = 87
+
+binga score >= 90
+    oga "Grade: A"
+wonga binga score >= 80
+    oga "Grade: B"
+wonga binga score >= 70
+    oga "Grade: C"
+wonga
+    oga "Grade: Try again tomorrow"
+unga
+
+clump grade(score)
+    binga score >= 90
+        ork "A"
+    wonga
+        ork "not A"
+    unga
+unga
+
+oga "Function says:", grade(95)

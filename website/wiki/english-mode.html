@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English mode - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a class="active" href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>You can write CMC with normal English words if you like. They are mixed in freely with the caveman words -- same language, same meaning.</p>
+<pre><code class="lang-cmc">let x = 5
+if x &gt; 3
+    print &quot;x is big&quot;
+else
+    print &quot;x is small&quot;
+end</code></pre>
+<p>That is exactly the same program as:</p>
+<pre><code class="lang-cmc">grunk x = 5
+binga x &gt; 3
+    oga &quot;x is big&quot;
+wonga
+    oga &quot;x is small&quot;
+unga</code></pre>
+<h2>The translation table</h2>
+<table><thead><tr><th>Caveman</th><th>English</th></tr></thead><tbody><tr><td><code>oga</code></td><td><code>print</code>, <code>say</code></td></tr><tr><td><code>grunk</code></td><td><code>let</code>, <code>make</code></td></tr><tr><td><code>binga</code></td><td><code>if</code></td></tr><tr><td><code>wonga</code></td><td><code>else</code></td></tr><tr><td><code>unga</code></td><td><code>end</code>, <code>done</code>, <code>finish</code></td></tr><tr><td><code>booga</code></td><td><code>repeat</code></td></tr><tr><td><code>zug</code></td><td><code>while</code></td></tr><tr><td><code>zoop</code></td><td><code>for</code></td></tr><tr><td><code>clump</code></td><td><code>fn</code>, <code>function</code>, <code>def</code></td></tr><tr><td><code>ork</code></td><td><code>return</code>, <code>give</code></td></tr><tr><td><code>blorp</code></td><td><code>ask</code></td></tr><tr><td><code>skrib</code></td><td><code>draw</code></td></tr><tr><td><code>ugg</code></td><td><code>comment</code></td></tr><tr><td><code>gronk</code></td><td><code>true</code></td></tr><tr><td><code>nork</code></td><td><code>false</code></td></tr><tr><td><code>plop</code></td><td><code>nothing</code></td></tr></tbody></table>
+<p>Everything else -- <code>snorf</code>, <code>nom</code>, <code>goop</code>, <code>munga</code>, <code>and</code>, <code>or</code>, <code>not</code>, <code>in</code> -- is already a word you can read.</p>
+<h2>Why have two languages?</h2>
+<ul><li>The caveman words are silly, memorable, and short. Kids remember <code>grunk</code>.</li><li>The English words help grown-ups and teachers feel at home.</li><li>Both compile to the same thing, so you can switch whenever you want.</li></ul>
+<h2>Fun: the same program twice</h2>
+<pre><code class="lang-cmc">function greet(name)
+    print &quot;hello &quot; + name
+end
+
+grunk people = snorf(&quot;Ugg&quot;, &quot;Oona&quot;)
+for person in people
+    greet(person)
+end</code></pre>
+<h2>Style tip</h2>
+<p>Pick one style and stay with it in a program, mostly. Mixing is allowed but your code reads best when it is consistent. Many learners start with the caveman words and slowly drift to English for longer projects -- that is a good path!</p>
+<p>Next: <a href="style-guide.html">Style guide</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+ugg blorp asks the person a question.
+grunk name = blorp "What is your name?"
+grunk color = blorp "What is your favorite color?"
+
+oga "Hello " + name + "!"
+oga color + " is a great color."

@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "title": "Start here",
+      "pages": ["index", "install", "getting-started", "first-program", "tutorial", "cheatsheet", "syntax"]
+    },
+    {
+      "title": "Language",
+      "pages": [
+        "values-and-types", "variables", "if", "loops", "functions", "lists",
+        "text", "math-and-random", "input", "drawing", "errors", "english-mode", "style-guide"
+      ]
+    },
+    {
+      "title": "Words",
+      "pages": ["words"]
+    },
+    {
+      "title": "OGABOOGA CODER",
+      "pages": ["ogabooga-coder", "blocks-guide", "keyboard-shortcuts", "troubleshooting"]
+    },
+    {
+      "title": "More",
+      "pages": ["examples", "faq", "glossary", "roadmap", "changelog", "contributing", "publishing"]
+    }
+  ]
+}

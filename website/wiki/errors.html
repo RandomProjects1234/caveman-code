@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Errors: what to do when OOGA happens - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a class="active" href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>CMC never shows you a scary wall of gibberish. Every mistake looks like this:</p>
+<pre><code class="lang-text">OOGA! Line 7: There is no box named &#x27;rocks&#x27;.
+Hint: make it first with: grunk rocks = ...</code></pre>
+<p>Two lines: what went wrong, and how to fix it. That is all.</p>
+<h2>Reading an error</h2>
+<ul><li><strong>OOGA!</strong> -- a mistake happened. Nobody is in trouble.</li><li><strong>Line 7</strong> -- the line to look at. In OGABOOGA CODER you can see line</li></ul>
+<p>numbers in the gutter next to the code.</p>
+<ul><li><strong>Hint</strong> -- the friendly fix.</li></ul>
+<h2>The mistakes everyone meets</h2>
+<h3>Blocks</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>A block was opened but never closed.</code></td><td>you forgot an <code>unga</code></td></tr><tr><td><code>You said 'unga', but nothing was open for it to close.</code></td><td>one <code>unga</code> too many</td></tr></tbody></table>
+<p>Count your blocks. Every <code>binga</code>, <code>booga</code>, <code>zug</code>, <code>zoop</code>, and <code>clump</code> needs exactly one <code>unga</code>.</p>
+<h3>Boxes</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>There is no box named 'x'.</code></td><td>use before <code>grunk</code>, or a typo</td></tr><tr><td><code>There is no box named 'x' to put that into.</code></td><td><code>x = ...</code> before making the box</td></tr><tr><td><code>'nom' already means something in CMC</code></td><td>pick a different name</td></tr></tbody></table>
+<h3>Text and numbers</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>Text and numbers cannot be stuck together directly.</code></td><td>use <code>goop(7)</code></td></tr><tr><td><code>numba cannot turn "banana" into a number.</code></td><td>the answer was not a number</td></tr><tr><td><code>Cannot share by zero!</code></td><td>someone divided by 0</td></tr><tr><td><code>I can only line up numbers with numbers, or text with text</code></td><td><code>&lt;</code> between kinds</td></tr></tbody></table>
+<h3>Piles</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>There is no spot 9 in that pile (it has 3 spots).</code></td><td>spot numbers start at 0</td></tr><tr><td><code>The pile is empty, so there is nothing to yoink!</code></td><td>check <code>nom(pile) &gt; 0</code></td></tr><tr><td><code>'zoop' walks through piles and text</code></td><td>you gave it a number</td></tr></tbody></table>
+<h3>Clumps</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>'add' wants 2 things, but got 3.</code></td><td>check the parentheses</td></tr><tr><td><code>There is no clump named 'gret'.</code></td><td>typo, or define it first</td></tr><tr><td><code>'x' is a box, not a clump</code></td><td>remove the <code>()</code> or rename</td></tr><tr><td><code>'ork' can only live inside a clump.</code></td><td>move it inside a <code>clump</code> block</td></tr></tbody></table>
+<h3>Runaways</h3>
+<table><thead><tr><th>Message</th><th>What happened</th></tr></thead><tbody><tr><td><code>This program ran for a very long time. Maybe a loop never stops?</code></td><td>a <code>zug</code> check never becomes nork</td></tr><tr><td><code>called itself too many times and went too deep.</code></td><td>recursion without a stopping <code>binga</code></td></tr></tbody></table>
+<h2>The three step fix</h2>
+<ol><li><strong>Read the line number.</strong> Go there.</li><li><strong>Read the hint.</strong> It usually names the exact word to add.</li><li><strong>Change one thing and run again.</strong> Small steps are fastest.</li></ol>
+<p>If you get stuck, delete the last thing you added. The bug is almost always there.</p>
+<h2>Errors are nothing to fear</h2>
+<p>Every programmer in the world sees errors all day. In CMC they even have a name: <strong>OOGA</strong>. Collect them. Each one teaches you one thing the computer needs.</p>
+<p>Next: <a href="english-mode.html">English mode</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

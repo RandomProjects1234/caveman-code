@@ -1,0 +1,13 @@
+ugg Temperature clumps: math with a purpose.
+clump to_f(c)
+    ork c * 9 / 5 + 32
+unga
+
+clump to_c(f)
+    ork (f - 32) * 5 / 9
+unga
+
+oga "0C is", to_f(0), "F"
+oga "100C is", to_f(100), "F"
+oga "212F is", to_c(212), "C"
+oga "98.6F is", round(to_c(98.6)), "C"

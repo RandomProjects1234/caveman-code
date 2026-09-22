@@ -1,0 +1,23 @@
+ugg no-check -- a game for a real person!
+grunk choices = snorf("rock", "paper", "scissors")
+
+oga "Rock, paper, scissors!"
+grunk mine = whisper(blorp "Your throw?")
+grunk theirs = choices[munga(0, 2)]
+
+oga "You threw", mine
+oga "CMC threw", theirs
+
+binga mine == theirs
+    oga "Tie! Throw again."
+wonga binga mine == "rock" and theirs == "scissors"
+    oga "You win!"
+wonga binga mine == "paper" and theirs == "rock"
+    oga "You win!"
+wonga binga mine == "scissors" and theirs == "paper"
+    oga "You win!"
+wonga binga mine == "rock" or mine == "paper" or mine == "scissors"
+    oga "CMC wins! Try again."
+wonga
+    oga "That is not a real throw. Try rock, paper, or scissors."
+unga

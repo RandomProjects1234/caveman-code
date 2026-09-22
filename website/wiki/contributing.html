@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contributing - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a class="active" href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>Welcome, cave artist. There are many ways to help, and most need no code at all.</p>
+<h2>Ways to help</h2>
+<h3>Tell a story or report a bump</h3>
+<p>Open a GitHub issue that says what you tried, what you expected, and what happened. Tiny programs are perfect bug reports:</p>
+<pre><code class="lang-cmc">ugg bug: oga with three things in a binga block
+grunk x = 1
+binga x == 1
+    oga &quot;one&quot;, x, &quot;!&quot;
+unga</code></pre>
+<h3>Write examples</h3>
+<p>The examples folder is the heart of the project. New examples should:</p>
+<ul><li>do one fun thing</li><li>be readable by a beginner</li><li>come with a <code>.out</code> file showing the exact output</li><li>have a short note at the top in an <code>ugg</code> line</li></ul>
+<p>A test runs every example and compares the output, so your <code>.out</code> must match exactly.</p>
+<h3>Improve the dictionary</h3>
+<p>Every word lives in <code>src/cmc/words.py</code>. A good entry has:</p>
+<ul><li>a one-line summary</li><li>the syntax, with <code>&lt;things&gt;</code> in angle brackets</li><li>a warm explanation with an example</li><li>tips about the mistakes people actually make</li></ul>
+<h3>Translate</h3>
+<p>The dictionary, the cheat sheet, and the tutorial are the best things to translate first. Keep the CMC words themselves; translate the explanations.</p>
+<h3>Teach</h3>
+<p>Classroom materials, posters, wall charts, and videos are all welcome. Tell us how it went -- "the 6 year olds loved <code>skrib</code> but got stuck on X" is valuable design feedback.</p>
+<h3>Write code</h3>
+<ul><li>Bugs with tests are the fastest to accept.</li><li>Big features should start as an issue with a sketch of the design.</li><li>Keep the language small: new keywords need a very good reason.</li><li>Every error message needs a friendly hint. That is the house style.</li></ul>
+<h2>House style</h2>
+<ul><li><strong>Kindness first.</strong> Errors, docs, and messages should make a beginner feel</li></ul>
+<p>capable.</p>
+<ul><li><strong>One idea per line.</strong> In code and in explanations.</li><li><strong>Explain WHY.</strong> Comments and docs explain reasons, not mechanics.</li><li><strong>Test everything.</strong> <code>python -m unittest discover -s tests -t .</code> must pass.</li><li><strong>No new dependencies.</strong> CMC runs on a bare Python install. Pull requests</li></ul>
+<p>that add packages will be asked to remove them.</p>
+<h2>The setup</h2>
+<pre><code class="lang-text">git clone https://github.com/your-name/caveman-code
+cd caveman-code
+set PYTHONPATH=src
+python -m cmc run examples/01_hello_oga.cmc
+python -m ogabooga
+python -m unittest discover -s tests -t .</code></pre>
+<p>To rebuild the website:</p>
+<pre><code class="lang-text">python tools/build_site.py --check</code></pre>
+<h2>Pull request checklist</h2>
+<ul><li>[ ] Tests pass</li><li>[ ] New behavior has tests</li><li>[ ] Error messages have hints</li><li>[ ] Docs updated (README, docs/, site_content/) if users see a change</li><li>[ ] Examples still pass</li><li>[ ] The diff is small and focused</li></ul>
+<h2>The code, cave by cave</h2>
+<table><thead><tr><th>Folder</th><th>What lives there</th></tr></thead><tbody><tr><td><code>src/cmc/lexer.py</code></td><td>turns text into tokens</td></tr><tr><td><code>src/cmc/parser.py</code></td><td>turns tokens into a tree</td></tr><tr><td><code>src/cmc/interpreter.py</code></td><td>runs the tree</td></tr><tr><td><code>src/cmc/builtins.py</code></td><td>helper words</td></tr><tr><td><code>src/cmc/codegen.py</code></td><td>CMC to Python</td></tr><tr><td><code>src/cmc/words.py</code></td><td>the dictionary (docs + aliases)</td></tr><tr><td><code>src/ogabooga/</code></td><td>the IDE</td></tr><tr><td><code>examples/</code></td><td>example programs and expected outputs</td></tr><tr><td><code>tests/</code></td><td>the test suite</td></tr><tr><td><code>site_content/</code></td><td>the website words, built by <code>tools/build_site.py</code></td></tr></tbody></table>
+<p>Thank you for helping the next cave coder.</p>
+<p>Next: <a href="publishing.html">Publishing guide</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

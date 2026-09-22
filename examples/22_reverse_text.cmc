@@ -1,0 +1,14 @@
+ugg Turn text around, letter by letter.
+clump reverse(text)
+    grunk out = ""
+    grunk i = nom(text) - 1
+    zug i >= 0
+        out = out + skoop(text, i)
+        i = i - 1
+    unga
+    ork out
+unga
+
+oga reverse("caveman")
+oga reverse("booga")
+oga flip("oga")

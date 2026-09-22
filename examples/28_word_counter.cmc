@@ -1,0 +1,13 @@
+ugg Count the words in a sentence.
+grunk sentence = "the cave man made a big fire"
+grunk words = split(sentence, " ")
+grunk long_words = 0
+
+zoop word in words
+    binga nom(word) > 3
+        long_words = long_words + 1
+    unga
+unga
+
+oga "Words:", nom(words)
+oga "Long words:", long_words

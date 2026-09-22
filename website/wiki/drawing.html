@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drawing with skrib - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a class="active" href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p><code>skrib</code> (caveman for <em>scribble</em>) draws in the <strong>Draw tab</strong> of OGABOOGA CODER, or in a picture window when you run from the terminal.</p>
+<h2>The picture</h2>
+<p>The spot <code>0, 0</code> is the <strong>top-left</strong> corner. <code>x</code> goes right, <code>y</code> goes down. The default picture is 400 by 400.</p>
+<pre><code class="lang-cmc">skrib size 400, 400</code></pre>
+<h2>Commands</h2>
+<table><thead><tr><th>Write this</th><th>It draws</th></tr></thead><tbody><tr><td><code>skrib color "red"</code></td><td>pick a color (names or <code>"#ff8800"</code>)</td></tr><tr><td><code>skrib dot x, y, r</code></td><td>a filled circle (a dot)</td></tr><tr><td><code>skrib circle x, y, r</code></td><td>an outline circle</td></tr><tr><td><code>skrib line x1, y1, x2, y2</code></td><td>a line</td></tr><tr><td><code>skrib box x, y, w, h</code></td><td>an outline rectangle</td></tr><tr><td><code>skrib blob x, y, w, h</code></td><td>a filled rectangle</td></tr><tr><td><code>skrib write "words", x, y</code></td><td>text on the picture</td></tr><tr><td><code>skrib clear</code></td><td>wipe the picture</td></tr></tbody></table>
+<p>Color names include the usual ones: <code>"red"</code>, <code>"orange"</code>, <code>"gold"</code>, <code>"green"</code>, <code>"blue"</code>, <code>"purple"</code>, <code>"brown"</code>, <code>"black"</code>, <code>"white"</code>, <code>"skyblue"</code>, and any hex color like <code>"#ff8800"</code>.</p>
+<h2>A sun</h2>
+<pre><code class="lang-cmc">skrib size 400, 400
+skrib color &quot;gold&quot;
+skrib dot 200, 200, 60
+skrib color &quot;orange&quot;
+booga 12
+    grunk angle_x = 200 + 90 * small(1, lap % 2)
+    skrib line 200, 200, angle_x, 20 + lap * 30
+unga</code></pre>
+<h2>A house</h2>
+<pre><code class="lang-cmc">skrib size 400, 400
+skrib color &quot;skyblue&quot;
+skrib blob 0, 0, 400, 260
+skrib color &quot;green&quot;
+skrib blob 0, 260, 400, 140
+skrib color &quot;brown&quot;
+skrib blob 140, 150, 120, 130
+skrib color &quot;red&quot;
+skrib line 120, 150, 200, 80
+skrib line 200, 80, 280, 150
+skrib color &quot;gold&quot;
+skrib box 180, 190, 40, 40
+skrib color &quot;black&quot;
+skrib write &quot;home&quot;, 170, 300
+oga &quot;Drew a home!&quot;</code></pre>
+<h2>Moving things: wait</h2>
+<p><code>wait(milliseconds)</code> pauses the program. 1000 milliseconds is one second. Draw, wait, clear, draw again -- that is animation:</p>
+<pre><code class="lang-cmc">skrib size 300, 300
+
+booga 20
+    skrib clear
+    skrib color &quot;purple&quot;
+    skrib dot 30 + lap * 12, 150, 15
+    wait(80)
+unga
+
+oga &quot;The dot ran across the screen!&quot;</code></pre>
+<p>The <strong>STOP</strong> button still works while <code>wait</code> is running.</p>
+<h2>Drawing with loops and math</h2>
+<pre><code class="lang-cmc">skrib size 400, 400
+skrib color &quot;teal&quot;
+
+booga 30
+    skrib circle 200, 200, lap * 6
+unga</code></pre>
+<pre><code class="lang-cmc">skrib size 400, 400
+skrib color &quot;purple&quot;
+
+grunk x = 200
+grunk y = 20
+booga 30
+    grunk nx = x + 4 * lap
+    grunk ny = y + 12
+    skrib line x, y, nx, ny
+    x = nx
+    y = ny
+unga</code></pre>
+<h2>Saving your picture</h2>
+<p>OGABOOGA CODER does not save pictures yet -- use a screenshot, or write a program that draws the same thing every time (that is why code is better than a paint program!).</p>
+<h2>Drawing in the terminal</h2>
+<p><code>cmc run picture.cmc</code> opens a window with the drawing. The window stays open after the program ends, so you can look at the art. Close it when you are done.</p>
+<p>If the drawing does nothing, you are probably running in a place with no windows (like a server). The program still runs, it just cannot show the picture.</p>
+<p>Next: <a href="errors.html">Errors</a> -- what to do when OOGA happens.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

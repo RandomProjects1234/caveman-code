@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Numbers, math, and random magic - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a class="active" href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<h2>The signs</h2>
+<table><thead><tr><th>Sign</th><th>Means</th><th>Example</th><th>Answer</th></tr></thead><tbody><tr><td><code>+</code></td><td>plus</td><td><code>2 + 3</code></td><td>5</td></tr><tr><td><code>-</code></td><td>minus</td><td><code>10 - 4</code></td><td>6</td></tr><tr><td><code>*</code></td><td>times</td><td><code>6 * 7</code></td><td>42</td></tr><tr><td><code>/</code></td><td>share</td><td><code>10 / 4</code></td><td>2.5</td></tr><tr><td><code>%</code></td><td>remainder</td><td><code>10 % 3</code></td><td>1</td></tr></tbody></table>
+<p>Times happens before plus, just like in school. Use parentheses when you want to be the boss:</p>
+<pre><code class="lang-cmc">oga 2 + 3 * 4        ugg 14
+oga (2 + 3) * 4      ugg 20</code></pre>
+<p>Dividing by zero does not crash -- it gives a friendly error:</p>
+<pre><code class="lang-text">OOGA! Cannot share by zero!
+Hint: check the number is not 0 before dividing.</code></pre>
+<p>Whole numbers stay whole when they can:</p>
+<pre><code class="lang-cmc">oga 4 / 2      ugg 2 (not 2.0 -- CMC keeps it tidy)
+oga 5 / 2      ugg 2.5</code></pre>
+<h2>The math helpers</h2>
+<pre><code class="lang-cmc">oga round(2.5)     ugg 3
+oga flat(2.9)      ugg 2    (always down)
+oga roof(2.1)      ugg 3    (always up)
+oga abs(0 - 7)     ugg 7    (how far from zero)
+oga small(3, 9)    ugg 3
+oga big(3, 9)      ugg 9
+oga root(81)       ugg 9
+oga root(2)        ugg 1.4142135623730951
+oga pow(2, 5)      ugg 32
+oga pi             ugg 3.141592653589793</code></pre>
+<p><code>root</code> of a negative number is an error with a hint to use <code>abs</code> first.</p>
+<h2>Random magic: munga</h2>
+<p><code>munga(low, high)</code> gives a random whole number, and <strong>both ends are possible</strong>:</p>
+<pre><code class="lang-cmc">grunk dice = munga(1, 6)
+oga &quot;You rolled a&quot;, dice</code></pre>
+<pre><code class="lang-cmc">grunk coin = munga(0, 1)
+binga coin == 0
+    oga &quot;heads&quot;
+wonga
+    oga &quot;tails&quot;
+unga</code></pre>
+<p>Picking a random thing from a pile:</p>
+<pre><code class="lang-cmc">grunk snacks = snorf(&quot;berry&quot;, &quot;fish&quot;, &quot;mystery meat&quot;)
+grunk pick = snacks[munga(0, nom(snacks) - 1)]
+oga &quot;tonight we eat:&quot;, pick</code></pre>
+<p><code>munga(1, 1)</code> is always 1. That is handy for testing: your program is random everywhere except where you say otherwise.</p>
+<h2>Text to number</h2>
+<p><code>blorp</code> answers are text, so use <code>numba</code> before doing math:</p>
+<pre><code class="lang-cmc">grunk answer = blorp &quot;How many rocks?&quot;
+grunk count = numba(answer)
+oga count * 2, &quot;is twice that many&quot;</code></pre>
+<p>If the answer was not a number, <code>numba</code> says:</p>
+<pre><code class="lang-text">OOGA! numba cannot turn &quot;banana&quot; into a number.
+Hint: answers that are numbers look like &quot;42&quot; or &quot;3.5&quot;.</code></pre>
+<h2>Number to text</h2>
+<p>Use <code>goop</code> when gluing a number into text:</p>
+<pre><code class="lang-cmc">oga &quot;half of 9 is &quot; + goop(9 / 2)</code></pre>
+<h2>A tiny calculator</h2>
+<pre><code class="lang-cmc">clump calc(a, op, b)
+    binga op == &quot;+&quot;
+        ork a + b
+    wonga binga op == &quot;-&quot;
+        ork a - b
+    wonga binga op == &quot;*&quot;
+        ork a * b
+    wonga binga op == &quot;/&quot;
+        ork a / b
+    wonga
+        ork plop
+    unga
+unga
+
+oga calc(6, &quot;*&quot;, 7)      ugg 42</code></pre>
+<p>Next: <a href="input.html">Asking questions</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

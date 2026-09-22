@@ -1,0 +1,12 @@
+ugg FizzBuzz, the famous cave test.
+booga 15
+    binga lap % 15 == 0
+        oga "fizzbuzz"
+    wonga binga lap % 3 == 0
+        oga "fizz"
+    wonga binga lap % 5 == 0
+        oga "buzz"
+    wonga
+        oga lap
+    unga
+unga

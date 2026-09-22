@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choices (binga / wonga) - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a class="active" href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p><code>binga</code> runs some code only when a check is <code>gronk</code> (yes).</p>
+<pre><code class="lang-cmc">grunk rocks = 5
+
+binga rocks &gt; 3
+    oga &quot;That is a rock collection!&quot;
+unga</code></pre>
+<p><code>wonga</code> means "otherwise":</p>
+<pre><code class="lang-cmc">binga rocks &gt; 3
+    oga &quot;Lots of rocks!&quot;
+wonga
+    oga &quot;Not many rocks.&quot;
+unga</code></pre>
+<p>Only <strong>one</strong> <code>unga</code> is needed. It closes the whole <code>binga</code>, whether or not the <code>wonga</code> part ran.</p>
+<h2>Else if, caveman style</h2>
+<p>Chain checks with <code>wonga binga</code>:</p>
+<pre><code class="lang-cmc">binga score &gt;= 90
+    oga &quot;A&quot;
+wonga binga score &gt;= 80
+    oga &quot;B&quot;
+wonga binga score &gt;= 70
+    oga &quot;C&quot;
+wonga
+    oga &quot;keep trying&quot;
+unga</code></pre>
+<p>CMC reads them in order and stops at the first <code>gronk</code>.</p>
+<h2>The checks</h2>
+<table><thead><tr><th>Check</th><th>Means</th></tr></thead><tbody><tr><td><code>a == b</code></td><td>a is equal to b</td></tr><tr><td><code>a != b</code></td><td>a is not equal to b</td></tr><tr><td><code>a &lt; b</code></td><td>a is smaller than b</td></tr><tr><td><code>a &lt;= b</code></td><td>a is smaller or equal</td></tr><tr><td><code>a &gt; b</code></td><td>a is bigger</td></tr><tr><td><code>a &gt;= b</code></td><td>a is bigger or equal</td></tr><tr><td><code>x in pile</code></td><td>x is inside a pile or inside text</td></tr><tr><td><code>x not in pile</code></td><td>x is not inside</td></tr></tbody></table>
+<p>Join checks with the logic words:</p>
+<pre><code class="lang-cmc">binga hungry and rocks &gt; 0
+    oga &quot;eat a rock&quot;
+unga
+
+binga name == &quot;Ugg&quot; or name == &quot;Oona&quot;
+    oga &quot;family!&quot;
+unga
+
+binga not tired
+    oga &quot;let us play!&quot;
+unga</code></pre>
+<p><code>and</code> needs both sides to be gronk; <code>or</code> needs just one; <code>not</code> flips. They stop early when the answer is already known.</p>
+<h2>What counts as yes?</h2>
+<p>See <a href="values-and-types.html">Values and types</a>, but the short version: <code>0</code>, <code>nork</code>, <code>""</code>, an empty pile, and <code>plop</code> are all nork. Everything else is gronk. So this works:</p>
+<pre><code class="lang-cmc">binga rocks
+    oga &quot;there is at least one rock&quot;
+unga</code></pre>
+<h2>One compare at a time</h2>
+<p>This is <strong>not</strong> allowed:</p>
+<pre><code class="lang-cmc">binga 1 &lt; x &lt; 10     ugg OOGA!</code></pre>
+<p>Write it with <code>and</code>:</p>
+<pre><code class="lang-cmc">binga 1 &lt; x and x &lt; 10
+    oga &quot;one digit&quot;
+unga</code></pre>
+<h2>Nesting</h2>
+<p>Blocks can live inside blocks:</p>
+<pre><code class="lang-cmc">binga door == &quot;open&quot;
+    binga light == &quot;on&quot;
+        oga &quot;walk on in&quot;
+    wonga
+        oga &quot;it is dark in there&quot;
+    unga
+wonga
+    oga &quot;knock first&quot;
+unga</code></pre>
+<p>Every <code>binga</code> gets its own <code>unga</code>. Line up the <code>unga</code> under its <code>binga</code> and your code will look like a tidy cave shelf.</p>
+<p>Next: <a href="loops.html">Loops</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

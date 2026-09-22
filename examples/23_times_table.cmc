@@ -1,0 +1,10 @@
+ugg A little times table made of piles.
+grunk row = 1
+zug row <= 3
+    grunk parts = snorf()
+    booga 3
+        plop(parts, row * lap)
+    unga
+    oga join(parts, " ")
+    row = row + 1
+unga

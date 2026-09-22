@@ -1,0 +1,11 @@
+ugg A clump that calls itself: the famous Fibonacci numbers.
+clump fib(n)
+    binga n < 2
+        ork n
+    unga
+    ork fib(n - 1) + fib(n - 2)
+unga
+
+booga 10
+    oga "fib", lap, "=", fib(lap - 1)
+unga

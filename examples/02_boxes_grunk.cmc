@@ -1,0 +1,11 @@
+ugg Boxes remember things.
+grunk name = "Ugg"
+grunk rocks = 3
+
+oga name, "has", rocks, "rocks"
+
+rocks = rocks + 1
+oga "Now", name, "has", rocks, "rocks"
+
+grunk favorite = "big shiny rock"
+oga name + "'s favorite is " + favorite

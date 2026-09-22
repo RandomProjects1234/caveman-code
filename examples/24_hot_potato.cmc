@@ -1,0 +1,7 @@
+ugg no-check -- random means the answer changes every run!
+grunk players = snorf("Ugg", "Oona", "Grog", "Zug")
+grunk rock = munga(0, nom(players) - 1)
+
+oga "Pass the rock around the circle..."
+oga "The rock stops with", players[rock] + "!"
+oga "Run it again for a different friend."

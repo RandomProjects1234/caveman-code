@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your first program, explained - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a class="active" href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>Here is a complete little program. Read the notes under each part.</p>
+<pre><code class="lang-cmc">ugg 1. A note. The computer skips &quot;ugg&quot; lines.
+oga &quot;Hello cave friend!&quot;
+
+ugg 2. A box that holds text.
+grunk name = &quot;Ugg&quot;
+
+ugg 3. A box that holds a number.
+grunk rocks = 3
+
+ugg 4. gluing things with +
+oga &quot;My name is &quot; + name + &quot; and I have &quot; + goop(rocks) + &quot; rocks&quot;
+
+ugg 5. a loop that counts laps
+booga 3
+    oga &quot;bang! lap&quot;, lap
+unga
+
+ugg 6. a decision
+binga rocks &gt;= 3
+    oga &quot;That is a rock collection!&quot;
+wonga
+    oga &quot;Need more rocks.&quot;
+unga</code></pre>
+<p>Output:</p>
+<pre><code class="lang-text">Hello cave friend!
+My name is Ugg and I have 3 rocks
+bang! lap 1
+bang! lap 2
+bang! lap 3
+That is a rock collection!</code></pre>
+<h2>Line by line</h2>
+<h3><code>ugg ...</code></h3>
+<p><code>ugg</code> starts a note (also called a comment). Notes are for humans. You can put one at the end of a line too:</p>
+<pre><code class="lang-cmc">oga &quot;hi&quot;   ugg this note is ignored</code></pre>
+<h3><code>oga "Hello cave friend!"</code></h3>
+<p><code>oga</code> prints. Text must be inside quotes. Without quotes, CMC looks for a box with that name:</p>
+<pre><code class="lang-cmc">oga &quot;name&quot;    ugg prints the word: name
+oga name      ugg prints what is inside the box: Ugg</code></pre>
+<h3><code>grunk name = "Ugg"</code></h3>
+<p><code>grunk</code> makes a new box called <code>name</code> and puts the text <code>Ugg</code> in it.</p>
+<h3><code>rocks</code> and <code>goop</code></h3>
+<p><code>goop(rocks)</code> turns the number 3 into the text <code>"3"</code> so it can be glued to other text with <code>+</code>. Gluing text and numbers directly gives a friendly error that reminds you to use <code>goop</code>.</p>
+<h3><code>booga 3 ... unga</code></h3>
+<p>Everything between <code>booga 3</code> and <code>unga</code> happens three times. The magic box <code>lap</code> counts 1, 2, 3.</p>
+<h3><code>binga ... wonga ... unga</code></h3>
+<p><code>binga</code> means "if". <code>wonga</code> means "else". The check <code>rocks &gt;= 3</code> is either <code>gronk</code> (yes) or <code>nork</code> (no).</p>
+<h2>Try these changes</h2>
+<ol><li>Change the name to your own.</li><li>Change <code>booga 3</code> to <code>booga 10</code>.</li><li>Change <code>rocks &gt;= 3</code> to <code>rocks &gt;= 100</code>.</li><li>Add a fourth bang with <code>booga rocks</code>.</li></ol>
+<h2>Ideas to try next</h2>
+<ul><li><a href="tutorial.html">Tutorial</a></li><li><a href="loops.html">Loops</a> -- <code>booga</code>, <code>zug</code>, and <code>zoop</code></li><li><a href="lists.html">Piles (lists)</a></li><li><a href="drawing.html">Drawing</a></li></ul>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

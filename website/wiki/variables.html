@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boxes (variables) - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a class="active" href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>A box remembers one thing so you can use it later. Making a box is called <code>grunk</code>; changing one is a plain <code>=</code>.</p>
+<pre><code class="lang-cmc">grunk name = &quot;Ugg&quot;
+grunk rocks = 3
+
+oga name, &quot;has&quot;, rocks, &quot;rocks&quot;
+
+rocks = rocks + 1
+oga &quot;now&quot;, rocks</code></pre>
+<h2>Making vs. changing</h2>
+<table><thead><tr><th>Write</th><th>What happens</th></tr></thead><tbody><tr><td><code>grunk x = 5</code></td><td>makes a new box <code>x</code></td></tr><tr><td><code>x = 6</code></td><td>puts 6 into the box that already exists</td></tr><tr><td><code>grunk x = 7</code></td><td>makes the box fresh again (the old thing is forgotten)</td></tr><tr><td><code>y = 6</code></td><td><code>OOGA!</code> if <code>y</code> was never made</td></tr></tbody></table>
+<p>Why so strict? Because typos are the number one bug for new coders. If you write <code>rock = rock + 1</code> but the box is called <code>rocks</code>, CMC tells you right away instead of quietly making a new box.</p>
+<h2>Boxes hold one thing</h2>
+<p>A box holds one value. You can put a text in it today and a number tomorrow, but the value it holds right now is the value you use:</p>
+<pre><code class="lang-cmc">grunk thing = &quot;rock&quot;
+oga thing            ugg rock
+thing = 5
+oga thing + 1        ugg 6</code></pre>
+<h2>Boxes live in the shape of your program</h2>
+<ul><li>Boxes made at the top level live for the whole program.</li><li>Boxes made inside a <code>clump</code> are that clump's own private boxes. They</li></ul>
+<p>disappear when the clump finishes.</p>
+<ul><li>A clump can read boxes from outside, but if it uses <code>grunk</code> on a name it</li></ul>
+<p>makes its own new box with that name.</p>
+<pre><code class="lang-cmc">grunk greeting = &quot;hello&quot;
+
+clump say_it()
+    grunk greeting = &quot;BOOGA&quot;    ugg this is a new, private box
+    oga greeting
+unga
+
+say_it()                 ugg BOOGA
+oga greeting             ugg hello (the outside box is untouched)</code></pre>
+<h2>The magic boxes</h2>
+<table><thead><tr><th>Box</th><th>What it holds</th></tr></thead><tbody><tr><td><code>gronk</code></td><td>yes (true)</td></tr><tr><td><code>nork</code></td><td>no (false)</td></tr><tr><td><code>plop</code></td><td>nothing</td></tr><tr><td><code>pi</code></td><td>the circle number 3.14159...</td></tr><tr><td><code>lap</code></td><td>the current <code>booga</code> lap, 1, 2, 3...</td></tr></tbody></table>
+<p>You cannot use these names for boxes you make.</p>
+<h2>Good names</h2>
+<ul><li><code>rocks</code>, <code>total</code>, <code>player_name</code>, <code>is_awake</code></li><li>Say what is inside, not what kind of thing it is.</li><li><code>r</code> is fine for a quick loop, but <code>rock_count</code> is better when you come back</li></ul>
+<p>tomorrow.</p>
+<h2>A tiny example</h2>
+<pre><code class="lang-cmc">grunk apples = 3
+grunk friends = 2
+
+grunk each_gets = flat(apples / friends)
+grunk leftover = apples % friends
+
+oga &quot;each friend gets&quot;, each_gets
+oga &quot;left over:&quot;, leftover</code></pre>
+<pre><code class="lang-text">each friend gets 1
+left over: 1</code></pre>
+<p>Next: <a href="if.html">Choices</a> -- making the computer decide things.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

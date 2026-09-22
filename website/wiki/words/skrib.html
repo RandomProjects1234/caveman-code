@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>skrib - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <img src="../../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../../index.html">Home</a>
+    <a href="../../wiki/index.html">Wiki</a>
+    <a href="../../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../../wiki/install.html">Installing CMC</a></li>
+<li><a href="../../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../../wiki/loops.html">Loops</a></li>
+<li><a href="../../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../../wiki/text.html">Text (goop)</a></li>
+<li><a href="../../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../../wiki/english-mode.html">English mode</a></li>
+<li><a href="../../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../../wiki/examples.html">Example programs</a></li>
+<li><a href="../../wiki/faq.html">FAQ</a></li>
+<li><a href="../../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../../wiki/changelog.html">Changelog</a></li>
+<li><a href="../../wiki/contributing.html">Contributing</a></li>
+<li><a href="../../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<h1>skrib</h1>
+<p class="aka">also written: draw</p>
+<p class="chip">Drawing</p>
+<p><strong>Draw on the picture window (OGABOOGA CODER's Draw tab).</strong></p>
+<h2>How to write it</h2>
+<pre><code>skrib circle &lt;x&gt;, &lt;y&gt;, &lt;r&gt;</code></pre>
+<pre><code>skrib dot &lt;x&gt;, &lt;y&gt;, &lt;r&gt;      ugg filled circle</code></pre>
+<pre><code>skrib line &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;</code></pre>
+<pre><code>skrib box &lt;x&gt;, &lt;y&gt;, &lt;w&gt;, &lt;h&gt; ugg outline rectangle</code></pre>
+<pre><code>skrib blob &lt;x&gt;, &lt;y&gt;, &lt;w&gt;, &lt;h&gt; ugg filled rectangle</code></pre>
+<pre><code>skrib write &quot;words&quot;, &lt;x&gt;, &lt;y&gt;</code></pre>
+<pre><code>skrib color &quot;red&quot;            ugg names or &quot;#ff8800&quot;</code></pre>
+<pre><code>skrib size &lt;w&gt;, &lt;h&gt;          ugg picture size</code></pre>
+<pre><code>skrib clear                  ugg wipe the picture</code></pre>
+<h2>What it does</h2>
+<p><code>skrib</code> (caveman for <em>scribble</em>) draws on the picture. The spot <code>0, 0</code> is the top-left corner. <code>x</code> goes right, <code>y</code> goes down.</p>
+<p>Colors can be names like <code>"red"</code>, <code>"blue"</code>, <code>"gold"</code> or hex colors like <code>"#ff8800"</code>.</p>
+<h2>Example</h2>
+<pre><code>skrib size 400, 400
+skrib color &quot;orange&quot;
+skrib circle 200, 200, 100
+skrib color &quot;black&quot;
+skrib dot 200, 200, 10
+skrib write &quot;SUN!&quot;, 175, 320</code></pre>
+<h2>Tips</h2>
+<ul><li>The picture window opens by itself the first time you draw.</li><li>Use <code>wait(ms)</code> between drawings to make a simple animation.</li><li>In the terminal build, close the picture window when the program is done.</li></ul>
+<h2>See also</h2><p><a href="wait.html">wait</a> &middot; <a href="booga.html">booga</a> &middot; <a href="munga.html">munga</a></p>
+<p class="back"><a href="../words.html">Back to all words</a></p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a class="active" href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<h2>Is CMC a real programming language?</h2>
+<p>Yes. It has a lexer, a parser, an interpreter, a compiler, a test suite, a language manual, and a package you can install. "Real" means it runs programs and people can build things with it. It is also small enough to read in an afternoon, which most languages are not.</p>
+<h2>Do I need to be good at math?</h2>
+<p>No. CMC has the normal four operations and a handful of helpers. You need counting more than math.</p>
+<h2>What age is CMC for?</h2>
+<p>The words and blocks are designed so a four year old can copy a working program and change it. The full language has enough depth (recursion, piles, text processing, drawing) for older kids and adults learning their first language.</p>
+<h2>Why do errors say OOGA?</h2>
+<p>Because it is funny and it removes fear. A mistake is an <em>ooga</em> -- a bump in the cave. The message underneath always explains the fix in plain words.</p>
+<h2>How long does it take to learn?</h2>
+<ul><li>10 minutes: print, boxes, one loop.</li><li>30 minutes: the whole tutorial (see <a href="tutorial.html">Tutorial</a>).</li><li>A weekend: comfortable with clumps, piles, and text.</li><li>Years: writing big programs well, like any language.</li></ul>
+<h2>Can I use it in a classroom?</h2>
+<p>Yes. MIT license, no dependencies, no accounts, no internet. The IDE is a single window. Teachers can print the <a href="cheatsheet.html">cheat sheet</a> and the repo has a full test suite for grading projects.</p>
+<h2>Does it run on a phone or tablet?</h2>
+<p>Not yet. It runs on Windows, macOS, and Linux desktops and laptops. A browser version is on the <a href="roadmap.html">roadmap</a>.</p>
+<h2>Can CMC make real games?</h2>
+<p>Small ones, yes -- text adventures, guessing games, drawing toys, and simple animations with <code>wait</code> and <code>skrib</code>. Full graphics games would need more library work; that is part of what "hard to master" means.</p>
+<h2>Why Python underneath?</h2>
+<p>Python is already installed on millions of computers, reads like English, and lets <code>cmc compile</code> produce code a learner can grow into. CMC is also small enough that a future version could target other machines.</p>
+<h2>Is CMC just a Python wrapper?</h2>
+<p>No. It has its own grammar (<code>unga</code> blocks, <code>skrib</code> statements, friendly checks) and its own runtime rules (whole-number division, friendly step limits, type-aware errors). The interpreter is written in Python, the same way many languages are written in C.</p>
+<h2>Can I mix CMC and Python?</h2>
+<p>Through the compiler: <code>cmc compile hello.cmc</code> makes readable Python. CMC programs cannot import Python libraries directly in v0.1 -- that is on the roadmap.</p>
+<h2>Why are lists called piles and booleans called gronk?</h2>
+<p>Because naming things like a caveman makes them sticky in your memory, and because it is fun. Every caveman word also has an English twin you can use instead: <code>snorf</code>/<code>list</code>-style words, <code>gronk</code>/<code>true</code>.</p>
+<h2>Is it safe for kids to run?</h2>
+<p>Yes. Programs cannot touch files, networks, or the system in v0.1. The worst thing a program can do is run a very long loop, and CMC stops that for you after about five million steps.</p>
+<h2>How do I share my program?</h2>
+<p>Save the <code>.cmc</code> file and send it. It is plain text. Anyone with CMC (or the website's future playground) can run it.</p>
+<h2>How can I help?</h2>
+<p>See <a href="contributing.html">Contributing</a>. New examples, translations of the dictionary, bug reports with tiny test programs, and classroom stories are all gold.</p>
+<p>Next: <a href="glossary.html">Glossary</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

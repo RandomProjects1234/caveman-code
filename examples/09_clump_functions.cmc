@@ -1,0 +1,12 @@
+ugg clump makes your own words.
+clump greet(name)
+    oga "Hello " + name + "!"
+unga
+
+clump cheer()
+    oga "BOOGA BOOGA BOOGA"
+unga
+
+greet("Ugg")
+greet("Oona")
+cheer()

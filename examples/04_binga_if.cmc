@@ -1,0 +1,16 @@
+ugg binga asks a yes-or-no question.
+grunk rocks = 5
+
+binga rocks > 3
+    oga "That is a lot of rocks!"
+unga
+
+binga rocks == 5
+    oga "Exactly five rocks."
+unga
+
+binga rocks < 3
+    oga "Not many rocks."
+unga
+
+oga "The check is done."

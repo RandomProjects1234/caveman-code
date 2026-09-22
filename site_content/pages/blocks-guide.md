@@ -1,0 +1,118 @@
+# The blocks guide
+
+The Blocks tab is a workshop where you build a program by dragging shapes.
+Every shape writes a line of CMC for you on the right. It is the easiest way
+for the very youngest coders to feel the power of code, and it stays useful
+for planning bigger programs.
+
+## The palette (left side)
+
+Blocks are grouped by job:
+
+| Group | Blocks |
+| --- | --- |
+| Talking | say (`oga`), ask (`blorp`) |
+| Boxes | make box (`grunk`), change box (`=`), change a spot |
+| Choices | binga (`if`) with a `wonga` area |
+| Loops | booga (repeat), zug (while), zoop each |
+| Clumps | clump, give back (`ork`), call clump |
+| Values | number, text, box value, random |
+| Piles | make pile, plop into pile, yoink from pile |
+| Drawing | skrib circle, dot, line, box, blob, write, color, size, wipe |
+
+## Two ways to add a block
+
+1. **Click** a palette block: it lands at the end of your stack.
+2. **Drag** a palette block: a ghost follows your mouse and a white line
+   shows exactly where it will land.
+
+## The slots
+
+Blocks have little dark boxes called **slots**. Slots hold expressions
+(numbers, text, box names, math). You can fill a slot two ways:
+
+- **Click it and type.** CMC checks what you typed; if it does not make
+  sense, the slot tells you.
+- **Drag a value block into it.** The number, text, box, and random blocks
+  from the Values group turn into the right expression.
+
+Value blocks never sit on their own -- they must live inside a slot. That is
+on purpose: it is the difference between *saying* a number and *storing* one.
+
+## Nesting
+
+Drop a block **inside** another block's shaded area to put it in that block:
+
+```text
+booga 3
+    oga "bang"
+    binga lap == 3
+        oga "last one!"
+    unga
+unga
+```
+
+The white insertion line shows where it will go. You can drag blocks back out
+into the main stack the same way.
+
+## The wonga area
+
+Every `binga` block has a `wonga` line. Drop blocks under it to say what
+happens otherwise. Leave it empty for a plain `if`.
+
+## Right-click menu
+
+| Menu item | What it does |
+| --- | --- |
+| Delete | remove the block (and everything inside it) |
+| Copy | make a duplicate right after it |
+| Move up / Move down | nudge it in its list |
+
+Dragging a block onto the **palette** (the left column) deletes it, like
+throwing it away.
+
+## Undo
+
+Every change is remembered. Click **Undo** or press Ctrl+Z. You can undo
+dozens of steps, including deletions.
+
+## Running blocks
+
+Press **RUN** while the Blocks tab is showing. First CMC checks every slot
+(a red warning in the status bar tells you which one), then it turns your
+blocks into CMC text and runs it. Errors still come with line numbers -- they
+point at the generated code.
+
+## Moving between blocks and text
+
+- **Send to Text tab** copies the generated CMC into the editor. Great for
+  reading and changing the text version.
+- **Load from Text tab** turns the editor's CMC back into blocks.
+
+Almost every example in the `examples/` folder can become blocks. If a line
+uses something that has no block yet, CMC says so politely and leaves your
+blocks alone.
+
+## A first block program
+
+Build this by hand:
+
+1. Drag **booga** in. Click its count slot, type `3`.
+2. Drag **oga** inside the booga body. Type `"bang!"`.
+3. Press RUN.
+
+The code panel shows:
+
+```cmc
+booga 3
+    oga "bang!"
+unga
+```
+
+```text
+bang!
+bang!
+bang!
+```
+
+Next: [Keyboard shortcuts](keyboard-shortcuts.md).

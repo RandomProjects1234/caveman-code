@@ -1,0 +1,15 @@
+ugg zug keeps going while the check stays gronk.
+grunk fuel = 3
+
+zug fuel > 0
+    oga "Zoom! fuel left:", fuel
+    fuel = fuel - 1
+unga
+
+oga "Out of fuel."
+
+grunk count = 0
+zug count < 5
+    count = count + 1
+unga
+oga "Counted to", count

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a class="active" href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>All the big moments in the cave, newest first.</p>
+<h2>v0.1.0 -- the first fire</h2>
+<p>The first release. Everything started here.</p>
+<p><strong>The language</strong></p>
+<ul><li>Caveman keywords: <code>oga</code>, <code>grunk</code>, <code>binga</code>, <code>wonga</code>, <code>unga</code>, <code>booga</code>, <code>zug</code>,</li></ul>
+<p><code>zoop</code>, <code>clump</code>, <code>ork</code>, <code>blorp</code>, <code>skrib</code>, <code>ugg</code></p>
+<ul><li>English aliases: <code>print</code>, <code>let</code>, <code>if</code>, <code>else</code>, <code>end</code>, <code>repeat</code>, <code>while</code>,</li></ul>
+<p><code>for</code>, <code>function</code>, <code>return</code>, <code>ask</code>, <code>draw</code>, <code>comment</code>, <code>true</code>, <code>false</code>, <code>nothing</code></p>
+<ul><li>Values: numbers (int/decimal), text, truth (<code>gronk</code>/<code>nork</code>), <code>plop</code>, piles</li><li>Helpers: <code>snorf</code>, <code>plop</code>, <code>nom</code>, <code>skoop</code>, <code>yoink</code>, <code>goop</code>, <code>shout</code>,</li></ul>
+<p><code>whisper</code>, <code>flip</code>, <code>find</code>, <code>split</code>, <code>join</code>, <code>what</code>, <code>numba</code>, <code>munga</code>, <code>round</code>, <code>flat</code>, <code>roof</code>, <code>abs</code>, <code>small</code>, <code>big</code>, <code>root</code>, <code>pow</code>, <code>wait</code></p>
+<ul><li>Drawing: <code>skrib</code> circle, dot, line, box, blob, write, color, size, clear</li><li>Friendly OOGA errors with line numbers and hints</li><li>Loop step limit and recursion depth limit so programs never freeze a computer</li><li>The magic <code>lap</code> box in <code>booga</code> loops</li></ul>
+<p><strong>The compiler</strong></p>
+<ul><li><code>cmc</code> command: REPL, <code>run</code>, <code>compile</code> (to Python), <code>init</code>, <code>examples</code>,</li></ul>
+<p><code>version</code></p>
+<ul><li>Python code generation with a small embedded runtime</li><li>123 tests covering the language, examples, code generation, blocks, and the</li></ul>
+<p>IDE</p>
+<p><strong>OGABOOGA CODER</strong></p>
+<ul><li>Text tab with line numbers and CMC syntax colors</li><li>Blocks tab: drag-and-drop palette, nesting, buttons, undo, error checking</li><li>Draw tab with a 500x400 canvas</li><li>Run/stop with a background thread, question windows for <code>blorp</code>, live output</li><li>Examples browser and searchable caveman dictionary</li><li>Export to Python</li></ul>
+<p><strong>Docs and site</strong></p>
+<ul><li>31 example programs with expected outputs</li><li>A wiki with a page for every word</li><li>Download page, main page, installation guide, 30-minute tutorial</li><li>Publishing guide for GitHub and GitHub Pages</li></ul>
+<h2>Unreleased</h2>
+<p>Nothing yet. The next fire is being planned in the <a href="roadmap.html">roadmap</a>.</p>
+<p>Next: <a href="contributing.html">Contributing</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

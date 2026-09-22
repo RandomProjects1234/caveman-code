@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piles (lists) - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a class="active" href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>A pile keeps many things in order. Make one with <code>snorf</code>:</p>
+<pre><code class="lang-cmc">grunk bag = snorf(&quot;apple&quot;, &quot;rock&quot;, &quot;banana&quot;)
+oga bag</code></pre>
+<pre><code class="lang-text">[apple, rock, banana]</code></pre>
+<p>An empty pile is <code>snorf()</code>.</p>
+<h2>Growing and shrinking</h2>
+<pre><code class="lang-cmc">grunk bag = snorf()
+plop(bag, &quot;apple&quot;)        ugg add to the end
+plop(bag, &quot;rock&quot;)
+oga nom(bag)              ugg 2, how many
+
+grunk last = yoink(bag)   ugg take the last thing off
+oga &quot;yoinked&quot;, last       ugg yoinked rock
+oga bag                   ugg [apple]</code></pre>
+<table><thead><tr><th>Word</th><th>What it does</th></tr></thead><tbody><tr><td><code>snorf(a, b, c)</code></td><td>make a pile</td></tr><tr><td><code>plop(pile, thing)</code></td><td>add <code>thing</code> to the end</td></tr><tr><td><code>nom(pile)</code></td><td>how many things</td></tr><tr><td><code>yoink(pile)</code></td><td>remove and give back the last thing</td></tr><tr><td><code>skoop(pile, i)</code></td><td>the thing at spot i</td></tr></tbody></table>
+<h2>Spots</h2>
+<p>Spot numbers start at <strong>0</strong>. Negative spots count from the end:</p>
+<pre><code class="lang-cmc">grunk pets = snorf(&quot;dog&quot;, &quot;cat&quot;, &quot;fish&quot;)
+
+oga pets[0]        ugg dog
+oga pets[1]        ugg cat
+oga pets[-1]       ugg fish (the last one)
+oga skoop(pets, 2) ugg fish</code></pre>
+<p>Asking for a spot that is not there is a friendly error:</p>
+<pre><code class="lang-text">OOGA! There is no spot 9 in that pile (it has 3 spots).
+Hint: spots start at 0, so the last spot is 2.</code></pre>
+<h2>Changing a spot</h2>
+<pre><code class="lang-cmc">pets[1] = &quot;tiger&quot;
+oga pets           ugg [dog, tiger, fish]</code></pre>
+<p>You can only change a spot that already exists. To add a new thing, use <code>plop</code>.</p>
+<h2>Walking through a pile</h2>
+<pre><code class="lang-cmc">zoop pet in pets
+    oga &quot;I love my&quot;, pet
+unga</code></pre>
+<h2>Is it inside?</h2>
+<pre><code class="lang-cmc">oga &quot;cat&quot; in pets            ugg gronk
+oga &quot;dragon&quot; in pets         ugg nork
+oga &quot;dragon&quot; not in pets     ugg gronk</code></pre>
+<h2>Piles of piles</h2>
+<p>Anything can go in a pile, including other piles:</p>
+<pre><code class="lang-cmc">grunk grid = snorf(snorf(1, 2), snorf(3, 4))
+oga grid[1][0]      ugg 3</code></pre>
+<h2>Useful tricks</h2>
+<h3>Add up a pile</h3>
+<pre><code class="lang-cmc">grunk numbers = snorf(4, 8, 15, 16, 23, 42)
+grunk total = 0
+zoop n in numbers
+    total = total + n
+unga
+oga &quot;total:&quot;, total      ugg total: 108</code></pre>
+<h3>Find the biggest</h3>
+<pre><code class="lang-cmc">grunk biggest = numbers[0]
+zoop n in numbers
+    binga n &gt; biggest
+        biggest = n
+    unga
+unga
+oga &quot;biggest:&quot;, biggest</code></pre>
+<h3>Turn a pile into text</h3>
+<pre><code class="lang-cmc">oga join(numbers, &quot; + &quot;)     ugg 4 + 8 + 15 + 16 + 23 + 42</code></pre>
+<h3>Turn text into a pile</h3>
+<pre><code class="lang-cmc">grunk words = split(&quot;rock,paper,scissors&quot;, &quot;,&quot;)
+oga words                     ugg [rock, paper, scissors]
+oga words[2]                  ugg scissors</code></pre>
+<h2>A small game: hot potato</h2>
+<pre><code class="lang-cmc">grunk players = snorf(&quot;Ugg&quot;, &quot;Oona&quot;, &quot;Grog&quot;, &quot;Zug&quot;)
+grunk rock = munga(0, nom(players) - 1)
+oga &quot;The rock stops with&quot;, players[rock]</code></pre>
+<p>Next: <a href="text.html">Text</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

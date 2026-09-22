@@ -1,0 +1,18 @@
+ugg Numbers and math helpers.
+grunk a = 7
+grunk b = 2
+
+oga "a + b =", a + b
+oga "a - b =", a - b
+oga "a * b =", a * b
+oga "a / b =", a / b
+oga "a % b =", a % b
+
+oga "big:", big(a, b)
+oga "small:", small(a, b)
+oga "rounded:", round(3.7)
+oga "flat:", flat(3.7)
+oga "roof:", roof(3.2)
+oga "abs:", abs(0 - 9)
+oga "root of 81:", root(81)
+oga "2 to the 3:", pow(2, 3)

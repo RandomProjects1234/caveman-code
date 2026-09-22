@@ -1,0 +1,10 @@
+ugg A triangle of stars using a loop inside a loop.
+grunk n = 1
+zug n <= 5
+    grunk stars = ""
+    booga n
+        stars = stars + "*"
+    unga
+    oga stars
+    n = n + 1
+unga

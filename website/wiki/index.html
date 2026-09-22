@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to the Cave Man Code wiki - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a class="active" href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>This is the home of the friendliest real programming language on the internet. CMC was built so that a brand new coder -- even a four year old sitting on a lap -- can say "make the computer talk" in the first minute, and still be learning clever things years later.</p>
+<h2>What is Cave Man Code?</h2>
+<p>Cave Man Code (CMC, say "see-em-see") is a small programming language where the words sound like a cave person invented them:</p>
+<pre><code class="lang-cmc">ugg This is a note. Ugg means &quot;ignore this line&quot;.
+oga &quot;Ooga booga!&quot;
+
+grunk rocks = 3
+booga rocks
+    oga &quot;bang rock&quot;, lap
+unga</code></pre>
+<ul><li><code>oga</code> means <strong>say something</strong></li><li><code>grunk</code> means <strong>make a box</strong> (a variable)</li><li><code>booga</code> means <strong>repeat</strong></li><li><code>unga</code> means <strong>done with this block</strong></li><li><code>ugg</code> means <strong>a note for humans</strong></li></ul>
+<p>That is already a real program with a loop in it.</p>
+<h2>Why is it easy?</h2>
+<ul><li><strong>One idea per line.</strong> No semicolons, no curly braces, no setup.</li><li><strong>Blocks close with a word you can see:</strong> <code>unga</code>.</li><li><strong>Friendly errors.</strong> Instead of <em>SyntaxError: unexpected EOF</em>, CMC says</li></ul>
+<p><code>OOGA! Line 4: A block was opened but never closed.</code> and tells you the fix.</p>
+<ul><li><strong>Two ways to code.</strong> Drag-and-drop blocks in OGABOOGA CODER, or type the</li></ul>
+<p>words. They are the same language underneath.</p>
+<ul><li><strong>Nothing to install.</strong> The compiler is Python, and even the IDE has no</li></ul>
+<p>extra libraries.</p>
+<h2>Why is it not a toy?</h2>
+<p>Under the simple words, CMC has numbers (int and decimal), text, lists (called <em>piles</em>), booleans (<em>gronk</em> and <em>nork</em>), functions (<em>clumps</em>), recursion, comprehension-style list loops, random numbers, and drawing. If you know Python, the built-in <code>cmc compile</code> turns any CMC program into readable Python.</p>
+<h2>Where to go next</h2>
+<ul><li><a href="install.html">Install CMC</a> -- takes one minute</li><li><a href="getting-started.html">Getting started</a> -- your first program</li><li><a href="tutorial.html">The 30 minute tutorial</a> -- the whole language, gently</li><li><a href="words.html">All the words A-Z</a> -- one page for every word</li><li><a href="ogabooga-coder.html">OGABOOGA CODER</a> -- meet the IDE</li></ul>
+<h2>A taste of the drawing power</h2>
+<pre><code class="lang-cmc">skrib size 400, 400
+skrib color &quot;gold&quot;
+
+booga 12
+    skrib line 200, 200, 200 + lap * 30, 20
+unga
+oga &quot;Sun rays drawn!&quot;</code></pre>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

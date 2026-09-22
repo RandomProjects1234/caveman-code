@@ -1,0 +1,17 @@
+ugg Piles hold lots of things in order.
+grunk bag = snorf()
+plop(bag, "apple")
+plop(bag, "rock")
+plop(bag, "banana")
+
+oga bag
+oga "how many:", nom(bag)
+oga "first:", skoop(bag, 0)
+oga "last:", bag[-1]
+
+grunk taken = yoink(bag)
+oga "I yoinked", taken
+oga bag
+
+bag[0] = "golden apple"
+oga bag

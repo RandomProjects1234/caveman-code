@@ -1,0 +1,19 @@
+ugg Draw a spiral with a loop.
+skrib size 400, 400
+skrib color "purple"
+
+grunk x = 200
+grunk y = 20
+
+booga 30
+    grunk nx = x + 4 * lap
+    grunk ny = y + 12
+    skrib line x, y, nx, ny
+    x = nx
+    y = ny
+    binga y > 390
+        y = 20
+    unga
+unga
+
+oga "Spiral done!"

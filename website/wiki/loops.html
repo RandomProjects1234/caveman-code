@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loops - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a class="active" href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>CMC has three loop words, each for a different job.</p>
+<h2>booga -- do it a set number of times</h2>
+<pre><code class="lang-cmc">booga 3
+    oga &quot;bang rock!&quot;
+unga</code></pre>
+<p>Inside the loop, the magic box <code>lap</code> holds 1 on the first lap, 2 on the second, and so on. It is perfect for counting:</p>
+<pre><code class="lang-cmc">booga 5
+    oga &quot;rock number&quot;, lap
+unga</code></pre>
+<p>The count can be any expression:</p>
+<pre><code class="lang-cmc">grunk rocks = 3
+booga rocks * 2
+    oga &quot;bang!&quot;
+unga</code></pre>
+<p><code>booga 0</code> does nothing. A decimal like <code>booga 2.5</code> is an error with a hint to use <code>round</code> or <code>flat</code>.</p>
+<p>Careful with nested <code>booga</code> loops: there is only one <code>lap</code> box, so the inner loop uses it up. If you need both counts, save the outer one in your own box first.</p>
+<h2>zug -- while something stays true</h2>
+<pre><code class="lang-cmc">grunk fuel = 3
+
+zug fuel &gt; 0
+    oga &quot;zoom! fuel left:&quot;, fuel
+    fuel = fuel - 1
+unga
+
+oga &quot;out of fuel&quot;</code></pre>
+<p><code>zug</code> checks <strong>before</strong> every lap. When the check turns <code>nork</code>, the loop stops. Notice <code>fuel = fuel - 1</code> inside: something must change, or the check will stay gronk forever.</p>
+<p>If a loop never stops, CMC stops it for you after about five million steps and says:</p>
+<pre><code class="lang-text">OOGA! This program ran for a very long time. Maybe a loop never stops?
+Hint: check your &#x27;zug&#x27; loops. Make sure the box they check gets changed inside the loop.</code></pre>
+<p>That is much friendlier than a frozen window.</p>
+<h2>zoop -- once for each thing</h2>
+<pre><code class="lang-cmc">grunk pets = snorf(&quot;dog&quot;, &quot;cat&quot;, &quot;rock&quot;)
+
+zoop pet in pets
+    oga &quot;I love my&quot;, pet
+unga</code></pre>
+<p>You pick the loop box name (<code>pet</code> above). It holds one thing each lap. This works for text too, giving one letter at a time:</p>
+<pre><code class="lang-cmc">zoop letter in &quot;cave&quot;
+    oga letter
+unga</code></pre>
+<p><code>zoop</code> over something that is not a pile or text is an error with a hint.</p>
+<h2>Which loop should I use?</h2>
+<table><thead><tr><th>Job</th><th>Use</th></tr></thead><tbody><tr><td>I know how many times</td><td><code>booga</code></td></tr><tr><td>Until something changes</td><td><code>zug</code></td></tr><tr><td>Once per thing in a pile</td><td><code>zoop</code></td></tr></tbody></table>
+<h2>Combining loops and choices</h2>
+<pre><code class="lang-cmc">grunk numbers = snorf(4, 8, 15, 16, 23, 42)
+grunk big_ones = 0
+
+zoop n in numbers
+    binga n &gt; 10
+        big_ones = big_ones + 1
+    unga
+unga
+
+oga &quot;big numbers:&quot;, big_ones</code></pre>
+<pre><code class="lang-text">big numbers: 4</code></pre>
+<h2>One more trick: building text in a loop</h2>
+<pre><code class="lang-cmc">grunk stars = &quot;&quot;
+booga 5
+    stars = stars + &quot;*&quot;
+unga
+oga stars</code></pre>
+<pre><code class="lang-text">*****</code></pre>
+<p>Next: <a href="functions.html">Clumps</a> -- make your own words.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

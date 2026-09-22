@@ -1,0 +1,11 @@
+ugg skrib draws on the picture window (the Draw tab in OGABOOGA CODER).
+skrib size 400, 400
+skrib color "orange"
+skrib circle 200, 200, 100
+skrib color "black"
+skrib dot 200, 200, 10
+skrib line 0, 0, 400, 400
+skrib box 20, 20, 60, 60
+skrib blob 320, 320, 50, 50
+skrib write "SUN!", 175, 320
+oga "Picture done!"

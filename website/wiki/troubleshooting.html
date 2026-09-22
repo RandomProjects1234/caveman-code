@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a class="active" href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<h2>The program does not start</h2>
+<h3>Double-clicking the .bat does nothing</h3>
+<p>The window may open and close too fast to read. Run it from a terminal:</p>
+<pre><code class="lang-text">powershell -File run_ogabooga.bat</code></pre>
+<p>The error will stay on screen. Usually it is Python missing from PATH.</p>
+<h3><code>python is not recognized</code></h3>
+<p>Python is not installed, or not on the PATH. Reinstall Python from python.org and tick <strong>Add Python to PATH</strong>.</p>
+<h3><code>ModuleNotFoundError: No module named 'cmc'</code></h3>
+<p>You are running from the wrong folder, or <code>src</code> is not on the import path.</p>
+<pre><code class="lang-text"># from the repo folder
+set PYTHONPATH=src          (Windows cmd)
+$env:PYTHONPATH = &quot;src&quot;     (PowerShell)
+export PYTHONPATH=src       (macOS/Linux)</code></pre>
+<p>Or install it: <code>pip install .</code></p>
+<h2>The window is open but weird</h2>
+<h3>The question window from blorp never appears</h3>
+<p>It appears when the program actually asks. If your program never reaches a <code>blorp</code>, nothing pops up. Check the output panel for where it stopped.</p>
+<h3>The picture is blank</h3>
+<ul><li>Make sure you pressed RUN while on the Text tab (or that the blocks call</li></ul>
+<p><code>skrib</code>).</p>
+<ul><li>CMC wipes the picture at the start of each run -- if your program draws and</li></ul>
+<p>then clears, you see white.</p>
+<ul><li>Check the coordinates: <code>0, 0</code> is the top-left. Drawing at <code>900, 900</code> on a</li></ul>
+<p>400x400 picture is off the edge.</p>
+<h3>My text is not colored</h3>
+<p>Colors appear in the Text and Blocks code panels. If they vanish, the word may be misspelled -- misspelled words are not keywords, so they stay plain.</p>
+<h2>The program runs but the answer is wrong</h2>
+<h3>It never stops</h3>
+<p>CMC stops runaway loops after five million steps and shows the OOGA message about a loop never stopping. Look at your <code>zug</code> check: is the box it checks changed inside the loop?</p>
+<h3>It stops immediately</h3>
+<p>Read the red OOGA line. The line number points at the problem. Nine times out of ten it is one of:</p>
+<ul><li>a missing <code>unga</code></li><li>a box used before <code>grunk</code></li><li><code>oga</code> missing in front of an expression</li></ul>
+<h3>Numbers come out as text</h3>
+<p><code>blorp</code> answers are always text. Wrap them in <code>numba(...)</code>.</p>
+<h3>Weird decimals (like 194.2222222222)</h3>
+<p>That is a real decimal. Use <code>round</code>, <code>flat</code>, or <code>roof</code> to tidy it for people. If you expected a whole number and got a decimal, look for a division that did not fit evenly -- or parentheses in the wrong place.</p>
+<h2>Blocks trouble</h2>
+<h3>A block will not drop into a slot</h3>
+<p>Only <strong>value</strong> blocks (number, text, box value, random) fit in slots. If you want to compute something (like <code>x + 1</code>), click the slot and type it.</p>
+<h3>Load from Text says "cannot become a block yet"</h3>
+<p>Some CMC ideas are text-only for now (for example mixing <code>blorp</code> inside a math expression). The message tells you the line. Use the Text tab for that program, or simplify the line.</p>
+<h3>Undo went too far</h3>
+<p>Ctrl+Z undoes one change at a time, up to about eighty changes back. There is no redo for blocks yet -- keep pressing RUN and experimenting; you can always load the previous save.</p>
+<h2>Terminal troubles</h2>
+<h3><code>cmc run</code> opens a picture window and it will not go away</h3>
+<p>Close the picture window. CMC keeps it open so you can admire the drawing.</p>
+<h3>Text looks garbled in the console</h3>
+<p>The terminal is not in UTF-8. CMC sets UTF-8 when it can. On very old consoles, set <code>chcp 65001</code> first.</p>
+<h2>Still stuck?</h2>
+<ul><li>Read the <a href="errors.html">Errors page</a> -- it lists every message with a fix.</li><li>Ask the <a href="words.html">Dictionary</a> what a word expects.</li><li>Make the smallest program you can that shows the problem. Bugs usually</li></ul>
+<p>vanish while you do this, which is a kind of magic.</p>
+<p>Next: <a href="examples.html">Examples</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

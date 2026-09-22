@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Values and types - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a class="active" href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p>Everything in CMC is one of five kinds of thing. <code>what(x)</code> tells you which:</p>
+<pre><code class="lang-cmc">oga what(3)          ugg number
+oga what(&quot;hi&quot;)       ugg text
+oga what(gronk)      ugg truth
+oga what(plop)       ugg plop
+oga what(snorf())    ugg pile</code></pre>
+<h2>number</h2>
+<p>Whole numbers and decimals. Everything you expect works:</p>
+<pre><code class="lang-cmc">oga 7, 3.5, 0 - 2
+oga 2 + 3 * 4        ugg 14, times goes first
+oga (2 + 3) * 4      ugg 20, parentheses are your friend</code></pre>
+<p>Division gives a whole number when it fits:</p>
+<pre><code class="lang-cmc">oga 4 / 2            ugg 2
+oga 5 / 2            ugg 2.5</code></pre>
+<p>Numbers print naturally: <code>2.0</code> shows as <code>2</code>.</p>
+<h2>text (goop)</h2>
+<p>Text is letters, numbers, and symbols inside quotes:</p>
+<pre><code class="lang-cmc">grunk name = &quot;Ugg&quot;
+grunk empty = &quot;&quot;
+oga name + &quot; the cave kid&quot;
+oga nom(name)                  ugg 3, how many letters
+oga name[0]                    ugg U
+oga shout(name), whisper(&quot;HEY&quot;) ugg UGG hey</code></pre>
+<p>Text cannot be glued directly to numbers with <code>+</code>. Use <code>goop</code>:</p>
+<pre><code class="lang-cmc">oga &quot;I am &quot; + goop(7) + &quot; years old&quot;</code></pre>
+<h2>truth (gronk / nork)</h2>
+<p>Checks give back <code>gronk</code> (yes) or <code>nork</code> (no):</p>
+<pre><code class="lang-cmc">grunk hungry = gronk
+oga hungry                ugg gronk
+oga not hungry            ugg nork
+oga 3 &gt; 5                 ugg nork</code></pre>
+<p><code>and</code>, <code>or</code>, and <code>not</code> work the way you expect, and stop early when they can:</p>
+<pre><code class="lang-cmc">binga hungry and rocks &gt; 0
+    oga &quot;eat a rock&quot;
+unga</code></pre>
+<h2>plop</h2>
+<p><code>plop</code> means <em>nothing at all</em>:</p>
+<ul><li>A clump without <code>ork</code> gives back <code>plop</code></li><li>A fresh box with nothing in it holds <code>plop</code></li><li><code>plop</code> prints as the word <code>plop</code></li></ul>
+<pre><code class="lang-cmc">clump shout_if_loud(word)
+    binga nom(word) &gt; 4
+        ork shout(word)
+    unga
+    ork plop
+unga
+
+oga shout_if_loud(&quot;hi&quot;)        ugg plop
+oga shout_if_loud(&quot;booga&quot;)     ugg BOOGA</code></pre>
+<p>The same word has a doing version: <code>plop(pile, thing)</code> adds to a pile. Read <a href="words/plop_call.html">plop(pile, thing)</a> for that one.</p>
+<h2>pile (snorf)</h2>
+<p>A pile is an ordered list that can grow and shrink:</p>
+<pre><code class="lang-cmc">grunk bag = snorf(&quot;apple&quot;, &quot;rock&quot;)
+plop(bag, &quot;banana&quot;)
+oga bag            ugg [apple, rock, banana]
+oga nom(bag)       ugg 3</code></pre>
+<p>Piles can hold any mix of kinds, even other piles:</p>
+<pre><code class="lang-cmc">grunk treasure = snorf(1, &quot;gold&quot;, gronk, snorf(&quot;deep&quot;, &quot;pile&quot;))
+oga treasure</code></pre>
+<pre><code class="lang-text">[1, gold, gronk, [deep, pile]]</code></pre>
+<h2>What counts as gronk in a check?</h2>
+<table><thead><tr><th>Value</th><th>In a check it means</th></tr></thead><tbody><tr><td><code>gronk</code></td><td>yes</td></tr><tr><td><code>nork</code></td><td>no</td></tr><tr><td><code>0</code></td><td>no</td></tr><tr><td>any other number</td><td>yes</td></tr><tr><td><code>""</code> (empty text)</td><td>no</td></tr><tr><td>other text</td><td>yes</td></tr><tr><td>empty pile <code>snorf()</code></td><td>no</td></tr><tr><td>other pile</td><td>yes</td></tr><tr><td><code>plop</code></td><td>no</td></tr></tbody></table>
+<p>This means <code>binga rocks</code> works and means "does rocks hold a non-zero number?"</p>
+<h2>Comparing unlike things</h2>
+<p><code>==</code> and <code>!=</code> never crash: different kinds are simply not equal.</p>
+<pre><code class="lang-cmc">oga 1 == &quot;1&quot;        ugg nork
+oga gronk == 1      ugg nork
+oga plop == plop    ugg gronk</code></pre>
+<p>But <code>&lt;</code> and <code>&gt;</code> need two numbers or two texts:</p>
+<pre><code class="lang-cmc">oga &quot;apple&quot; &lt; &quot;banana&quot;    ugg gronk (alphabetical)
+oga 3 &lt; &quot;four&quot;            ugg OOGA! with a hint</code></pre>
+<h2>Making one kind out of another</h2>
+<table><thead><tr><th>From</th><th>To</th><th>Use</th></tr></thead><tbody><tr><td>number</td><td>text</td><td><code>goop(7)</code></td></tr><tr><td>text</td><td>number</td><td><code>numba("42")</code></td></tr><tr><td>anything</td><td>text</td><td><code>goop(x)</code> (piles print with brackets)</td></tr><tr><td>pile of things</td><td>text</td><td><code>join(pile, ", ")</code></td></tr><tr><td>text</td><td>pile</td><td><code>split("a,b", ",")</code></td></tr></tbody></table>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+ugg Count down and blast off.
+grunk n = 5
+zug n > 0
+    oga n
+    n = n - 1
+unga
+oga "Blast off!"

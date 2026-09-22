@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asking questions (blorp) - Cave Man Code</title>
+<meta name="description" content="Cave Man Code (CMC)">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <img src="../assets/logo.svg" alt="CMC logo" width="40" height="40">
+    <span>Cave Man Code</span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search the wiki... (try grunk)" autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../wiki/index.html">Wiki</a>
+    <a href="../download.html">Download</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="nav-section">Start here</div>
+<ul>
+<li><a href="../wiki/index.html">Welcome to the Cave Man Code wiki</a></li>
+<li><a href="../wiki/install.html">Installing CMC</a></li>
+<li><a href="../wiki/getting-started.html">Getting started</a></li>
+<li><a href="../wiki/first-program.html">Your first program, explained</a></li>
+<li><a href="../wiki/tutorial.html">The 30 minute tutorial</a></li>
+<li><a href="../wiki/cheatsheet.html">Cheat sheet</a></li>
+<li><a href="../wiki/syntax.html">Syntax and grammar</a></li>
+</ul>
+<div class="nav-section">Language</div>
+<ul>
+<li><a href="../wiki/values-and-types.html">Values and types</a></li>
+<li><a href="../wiki/variables.html">Boxes (variables)</a></li>
+<li><a href="../wiki/if.html">Choices (binga / wonga)</a></li>
+<li><a href="../wiki/loops.html">Loops</a></li>
+<li><a href="../wiki/functions.html">Clumps (functions)</a></li>
+<li><a href="../wiki/lists.html">Piles (lists)</a></li>
+<li><a href="../wiki/text.html">Text (goop)</a></li>
+<li><a href="../wiki/math-and-random.html">Numbers, math, and random magic</a></li>
+<li><a class="active" href="../wiki/input.html">Asking questions (blorp)</a></li>
+<li><a href="../wiki/drawing.html">Drawing with skrib</a></li>
+<li><a href="../wiki/errors.html">Errors: what to do when OOGA happens</a></li>
+<li><a href="../wiki/english-mode.html">English mode</a></li>
+<li><a href="../wiki/style-guide.html">The style guide (easy to learn, hard to master)</a></li>
+</ul>
+<div class="nav-section">Words</div>
+<ul>
+<li><a href="../wiki/words.html">All words A-Z</a></li>
+</ul>
+<div class="nav-section">OGABOOGA CODER</div>
+<ul>
+<li><a href="../wiki/ogabooga-coder.html">OGABOOGA CODER</a></li>
+<li><a href="../wiki/blocks-guide.html">The blocks guide</a></li>
+<li><a href="../wiki/keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="../wiki/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<div class="nav-section">More</div>
+<ul>
+<li><a href="../wiki/examples.html">Example programs</a></li>
+<li><a href="../wiki/faq.html">FAQ</a></li>
+<li><a href="../wiki/glossary.html">Glossary (the caveman dictionary, human side)</a></li>
+<li><a href="../wiki/roadmap.html">Roadmap</a></li>
+<li><a href="../wiki/changelog.html">Changelog</a></li>
+<li><a href="../wiki/contributing.html">Contributing</a></li>
+<li><a href="../wiki/publishing.html">Publishing CMC to GitHub</a></li>
+</ul>
+</nav>
+<main class="content">
+<p><code>blorp</code> shows a question and waits for the person to answer. The answer comes back as <strong>text</strong>.</p>
+<pre><code class="lang-cmc">grunk name = blorp &quot;What is your name?&quot;
+oga &quot;Hello &quot; + name + &quot;!&quot;</code></pre>
+<p>In OGABOOGA CODER, a friendly question window pops up. In the terminal build, the person types into the console.</p>
+<h2>The answer is text</h2>
+<p>Even if they type <code>7</code>, you get the text <code>"7"</code>. Use <code>numba</code> for math:</p>
+<pre><code class="lang-cmc">grunk answer = blorp &quot;Pick a number&quot;
+grunk n = numba(answer)
+oga n, &quot;plus one is&quot;, n + 1</code></pre>
+<h2>Kinds of questions</h2>
+<pre><code class="lang-cmc">grunk name = blorp &quot;What is your name?&quot;
+grunk color = blorp &quot;Favorite color?&quot;
+grunk word = blorp &quot;Give me a word and I will shout it&quot;
+oga shout(word)</code></pre>
+<p>No question at all:</p>
+<pre><code class="lang-cmc">grunk anything = blorp()</code></pre>
+<h2>A conversation</h2>
+<pre><code class="lang-cmc">oga &quot;Ooga! Me CMC. Who you?&quot;
+
+grunk name = blorp &quot;Your name?&quot;
+grunk age = numba(blorp &quot;How many winters old?&quot;)
+
+oga &quot;Hello &quot; + name + &quot;.&quot;
+oga &quot;You are&quot;, age, &quot;winters old.&quot;
+
+binga age &gt; 100
+    oga &quot;You are older than the cave!&quot;
+wonga
+    oga &quot;You have many winters ahead.&quot;
+unga</code></pre>
+<h2>Guessing game (the classic)</h2>
+<pre><code class="lang-cmc">grunk secret = munga(1, 10)
+grunk guess = 0
+grunk tries = 0
+
+oga &quot;Me think of number from 1 to 10!&quot;
+
+zug guess != secret
+    guess = numba(blorp &quot;Your guess?&quot;)
+    tries = tries + 1
+    binga guess &lt; secret
+        oga &quot;Bigger!&quot;
+    wonga binga guess &gt; secret
+        oga &quot;Smaller!&quot;
+    unga
+unga
+
+oga &quot;Yes! You got it in&quot;, tries, &quot;tries.&quot;</code></pre>
+<p>Notice <code>guess</code> starts at 0 so the <code>zug</code> check runs at least once. If <code>secret</code> was 0 the loop would not run at all -- a 1-in-10 chance! Can you fix that? (Hint: make <code>guess</code> start at <code>plop</code> and check <code>guess != secret or tries == 0</code>.)</p>
+<h2>Ideas</h2>
+<ul><li>A silly interview machine</li><li>A fake pet that asks what it should eat</li><li>A story where the player picks the hero's name</li></ul>
+<p>Next: <a href="drawing.html">Drawing</a>.</p>
+</main>
+</div>
+<footer class="footer">
+  <span>Cave Man Code (CMC) v0.1.0 - MIT License - made for tiny hands and big ideas.</span>
+  <span>Ugg say: small steps, big rocks.</span>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>
