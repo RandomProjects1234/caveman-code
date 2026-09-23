@@ -4,7 +4,7 @@ Five minutes from now you will have written and run a real program.
 
 ## 1. Open OGABOOGA CODER
 
-Double-click `run_ogabooga.bat` (or run `python -m ogabooga`). You get a big
+Double-click `run_ogabooga.bat` (or run `bin\ogabooga.exe`). You get a big
 friendly window with three tabs:
 
 - **Blocks (drag and drop)** -- the block workshop

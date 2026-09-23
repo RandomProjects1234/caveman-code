@@ -51,17 +51,17 @@ Small ones, yes -- text adventures, guessing games, drawing toys, and simple
 animations with `wait` and `skrib`. Full graphics games would need more
 library work; that is part of what "hard to master" means.
 
-## Why Python underneath?
+## Why C++ underneath?
 
-Python is already installed on millions of computers, reads like English, and
+C++ builds one tiny stand-alone program with no runtime to install, and
 lets `cmc compile` produce code a learner can grow into. CMC is also small
 enough that a future version could target other machines.
 
-## Is CMC just a Python wrapper?
+## Is CMC a real language?
 
 No. It has its own grammar (`unga` blocks, `skrib` statements, friendly
 checks) and its own runtime rules (whole-number division, friendly step
-limits, type-aware errors). The interpreter is written in Python, the same way
+limits, type-aware errors). The interpreter is written in C++, the same way
 many languages are written in C.
 
 ## Can I mix CMC and Python?

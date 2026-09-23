@@ -78,7 +78,7 @@ caveman-code/
 
 ## Before you publish
 
-- Run the tests: `python -m unittest discover -s tests -t .`
+- Run the tests: `powershell -File native\tests\run_tests.ps1`
 - Build the site: `python tools/build_site.py --check`
 - Build the zips: `powershell -File tools/build_release.ps1`
 - Check the license and your name in `pyproject.toml`.

@@ -116,7 +116,7 @@ git push origin v0.1.0</code></pre>
   website/             the built website (Pages serves this)
   tools/               site and release builders</code></pre>
 <h2>Before you publish</h2>
-<ul><li>Run the tests: <code>python -m unittest discover -s tests -t .</code></li><li>Build the site: <code>python tools/build_site.py --check</code></li><li>Build the zips: <code>powershell -File tools/build_release.ps1</code></li><li>Check the license and your name in <code>pyproject.toml</code>.</li></ul>
+<ul><li>Run the tests: <code>powershell -File native\tests\run_tests.ps1</code></li><li>Build the site: <code>python tools/build_site.py --check</code></li><li>Build the zips: <code>powershell -File tools/build_release.ps1</code></li><li>Check the license and your name in <code>pyproject.toml</code>.</li></ul>
 <h2>After publishing</h2>
 <ul><li>Add the real GitHub link to the website top bar (<code>site_content</code> then rebuild).</li><li>Point the download page buttons at your GitHub Releases if you prefer</li></ul>
 <p>releases over repo files.</p>

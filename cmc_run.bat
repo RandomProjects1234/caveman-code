@@ -3,12 +3,15 @@ rem Run a CMC program. Drag any .cmc file onto this file, or double-click
 rem to start the talk-back REPL.
 setlocal
 cd /d "%~dp0"
-set "PYTHONPATH=%~dp0src"
-set "PY=python"
-where python >nul 2>nul || set "PY=py -3"
+if not exist "bin\cmc.exe" (
+    echo The CMC compiler is not built yet.
+    echo Build it with:  native\build.bat
+    pause
+    exit /b 1
+)
 if "%~1"=="" (
-    %PY% -m cmc
+    "bin\cmc.exe"
 ) else (
-    %PY% -m cmc run "%~1"
+    "bin\cmc.exe" run "%~1"
 )
 if errorlevel 1 pause

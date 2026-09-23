@@ -30,11 +30,12 @@ drawing.
 Grab a zip from the [download page](website/download.html) (or the
 `website/downloads/` folder in a fresh checkout), unzip it, and:
 
-- **Windows:** double-click `run_ogabooga.bat`
-- **Anywhere:** `PYTHONPATH=src python3 -m ogabooga`
-- **Terminal:** `PYTHONPATH=src python3 -m cmc run examples/01_hello_oga.cmc`
+- **Windows:** double-click `run_ogabooga.bat` (the IDE) or drag a `.cmc`
+  file onto `cmc_run.bat` (the runner)
+- **Terminal:** `bin\cmc.exe run examples\01_hello_oga.cmc`
 
-Python 3.9+ is the only requirement. Nothing else to install.
+Everything is built in C++ with no dependencies. Nothing else to install.
+To build it yourself with g++ or clang, run `native\build.bat`.
 
 ## OGABOOGA CODER
 
@@ -83,8 +84,8 @@ and a 30-minute tutorial. See [website/index.html](website/index.html).
   compiler.
 - **A real compiler.** `cmc compile hello.cmc` writes `hello.py`: standalone,
   readable Python with a small embedded runtime.
-- **Zero dependencies.** The compiler, REPL, IDE, tests, and site builder are
-  plain Python.
+- **Zero dependencies.** The compiler, REPL, IDE, and tests are plain C++
+  (C++17) with no libraries beyond the Windows system DLLs.
 
 ## Repo layout
 
@@ -92,29 +93,30 @@ and a 30-minute tutorial. See [website/index.html](website/index.html).
 caveman-code/
   README.md          you are here
   CHEATSHEET.md      one-page reference
-  src/cmc/           the compiler (lexer, parser, interpreter, builtins, codegen)
-  src/ogabooga/      OGABOOGA CODER, the IDE with the compiler inside
+  native/src/engine/ the compiler (lexer, parser, interpreter, builtins, codegen)
+  native/src/cli/    the cmc command line (run, compile, REPL)
+  native/src/ide/    OGABOOGA CODER, the IDE with the compiler inside
+  native/tests/      test scripts and expected outputs
+  bin/               the built programs (cmc.exe, ogabooga.exe)
   examples/          31 programs with expected outputs
-  tests/             123 tests: language, examples, codegen, blocks, IDE
   docs/              the full manual (spec, errors, IDE guide, publishing)
   site_content/      wiki sources (markdown + dictionary data)
   website/           the built wiki, main page, and download page
-  tools/             site builder, docs writer, release builder, exe builder
+  tools/             release builder (PowerShell)
 ```
 
 ## Commands
 
 ```text
-python -m cmc                     talk to CMC line by line (REPL)
-python -m cmc run hello.cmc       run a program
-python -m cmc compile hello.cmc   make hello.py
-python -m cmc init hello.cmc      make a starter program
-python -m cmc examples            list example programs
-python -m ogabooga                open the IDE
-python -m unittest discover -s tests -t .     run all tests
-python tools/build_site.py --check            rebuild the website
-python tools/write_docs.py                    regenerate repo docs
-python tools/build_release.ps1                build the download zips
+bin\cmc.exe                     talk to CMC line by line (REPL)
+bin\cmc.exe run hello.cmc       run a program
+bin\cmc.exe compile hello.cmc   make hello.py
+bin\cmc.exe init hello.cmc      make a starter program
+bin\cmc.exe examples            list example programs
+bin\ogabooga.exe                open the IDE
+native\build.bat                build both programs with g++
+powershell -File native\tests\run_tests.ps1     run the test suite
+powershell -File tools\build_release.ps1        build the download zips
 ```
 
 ## Docs

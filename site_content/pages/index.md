@@ -36,8 +36,8 @@ That is already a real program with a loop in it.
   `OOGA! Line 4: A block was opened but never closed.` and tells you the fix.
 - **Two ways to code.** Drag-and-drop blocks in OGABOOGA CODER, or type the
   words. They are the same language underneath.
-- **Nothing to install.** The compiler is Python, and even the IDE has no
-  extra libraries.
+- **Nothing to install.** The compiler and the IDE are C++, and the programs
+  have no dependencies at all.
 
 ## Why is it not a toy?
 

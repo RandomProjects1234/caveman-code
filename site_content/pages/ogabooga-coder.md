@@ -7,7 +7,7 @@ install.
 Start it by double-clicking `run_ogabooga.bat`, or:
 
 ```text
-python -m ogabooga
+bin\ogabooga.exe
 ```
 
 ## The window

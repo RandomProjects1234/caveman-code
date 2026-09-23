@@ -78,8 +78,9 @@
 <main class="content">
 
 <h1>Download Cave Man Code</h1>
-<p>CMC is free, tiny, and runs on any computer with Python 3.9 or newer.
-Everything you need is in one zip: the compiler, OGABOOGA CODER, all examples, and the docs.</p>
+<p>CMC is free, tiny, and runs on Windows. The compiler and the IDE are built
+in C++ with no dependencies. Everything you need is in one zip: the compiler,
+OGABOOGA CODER, all examples, and the docs.</p>
 <div class="cards">
 <div class="card"><h3>CMC-Compiler-v0.1.0</h3><p>Ready to run. Unzip it anywhere and double-click the launcher.</p><a class="button" href="downloads/CMC-Compiler-v0.1.0.zip" download>Download CMC-Compiler-v0.1.0.zip</a></div>
 <div class="card"><h3>CaveManCode-v0.1.0</h3><p>Ready to run. Unzip it anywhere and double-click the launcher.</p><a class="button" href="downloads/CaveManCode-v0.1.0.zip" download>Download CaveManCode-v0.1.0.zip</a></div>
@@ -89,33 +90,35 @@ Everything you need is in one zip: the compiler, OGABOOGA CODER, all examples, a
 <pre><code>1. Download a zip above and right-click -> Extract All...
 2. Open the extracted folder.
 3. Double-click run_ogabooga.bat  (or cmc_run.bat to run programs in a terminal)</code></pre>
-<h2>How to install (macOS / Linux)</h2>
+<h2>How to build from source</h2>
 <pre><code>unzip CMC-Compiler-v0.1.0.zip
 cd caveman-code
-PYTHONPATH=src python3 -m cmc run examples/01_hello_oga.cmc
-PYTHONPATH=src python3 -m ogabooga</code></pre>
+native\build.bat
+bin\cmc.exe run examples\01_hello_oga.cmc
+bin\ogabooga.exe</code></pre>
 <h2>What is inside</h2>
 <table>
 <thead><tr><th>File</th><th>What it does</th></tr></thead>
 <tbody>
-<tr><td>src/cmc/</td><td>the compiler (lexer, parser, interpreter, Python generator)</td></tr>
-<tr><td>src/ogabooga/</td><td>OGABOOGA CODER, the IDE with the compiler inside</td></tr>
+<tr><td>bin/cmc.exe</td><td>the compiler, runner, and REPL</td></tr>
+<tr><td>bin/ogabooga.exe</td><td>OGABOOGA CODER, the IDE with the compiler inside</td></tr>
+<tr><td>native/</td><td>the C++ source (engine, CLI, IDE) and build scripts</td></tr>
 <tr><td>run_ogabooga.bat</td><td>starts the IDE on Windows</td></tr>
 <tr><td>cmc_run.bat</td><td>drag any .cmc file onto it to run it</td></tr>
 <tr><td>examples/</td><td>31 example programs from hello world to recursion</td></tr>
 <tr><td>docs/</td><td>the full manual</td></tr>
 </tbody>
 </table>
-<h2>Make your own .exe (optional)</h2>
-<p>If you want a stand-alone <code>OgaboogaCoder.exe</code> with no Python installed,
-use the included PyInstaller script:</p>
-<pre><code>pip install pyinstaller
-powershell -File tools/build_exe.ps1</code></pre>
+<h2>Build your own programs (optional)</h2>
+<p>The zips already contain stand-alone <code>cmc.exe</code> and
+<code>ogabooga.exe</code> with no dependencies. To build them yourself with
+g++ or clang:</p>
+<pre><code>native\build.bat</code></pre>
 <h2>System needed</h2>
 <ul>
-<li>Python 3.9 or newer (tkinter comes with the normal installer)</li>
-<li>Windows, macOS, or Linux</li>
-<li>About 5 MB of space, no internet needed after download</li>
+<li>Windows 10 or newer (the compiler and REPL also build on macOS/Linux)</li>
+<li>No runtime to install -- the programs are self-contained</li>
+<li>About 10 MB of space, no internet needed after download</li>
 </ul>
 
 </main>

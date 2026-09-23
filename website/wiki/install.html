@@ -76,45 +76,31 @@
 </ul>
 </nav>
 <main class="content">
-<p>Cave Man Code is tiny and free. There are two ways to get it.</p>
+<p>Cave Man Code is tiny and free. Everything is built in C++ with no dependencies -- the compiler, the IDE, and the tests.</p>
 <h2>Option 1: The zip (easiest)</h2>
-<ol><li>Go to the <a href="../download.html">download page</a>.</li><li>Download <strong>CMC-Compiler-v0.1.0.zip</strong> or the all-in-one zip.</li><li>Right-click the zip and choose <strong>Extract All</strong>.</li><li>Open the folder and double-click <code>run_ogabooga.bat</code>.</li></ol>
-<p>That is it. Python 3.9 or newer is the only requirement (it comes with <code>tkinter</code>, which CMC uses for its windows).</p>
-<h2>Option 2: From the repo (for tinkerers)</h2>
-<p>If you cloned the GitHub repo:</p>
+<ol><li>Go to the <a href="../download.html">download page</a>.</li><li>Download <strong>CMC-Compiler-v0.1.0.zip</strong> or the all-in-one zip.</li><li>Right-click the zip and choose <strong>Extract All</strong>.</li><li>Open the folder and double-click <code>run_ogabooga.bat</code> (the IDE) or <code>cmc_run.bat</code> (the terminal runner).</li></ol>
+<p>That is it. Nothing else to install. The programs are already built: <code>bin\cmc.exe</code> (compiler, runner, and REPL) and <code>bin\ogabooga.exe</code> (the IDE).</p>
+<h2>Option 2: Build it from the repo (for tinkerers)</h2>
+<p>You need a C++17 compiler (g++ or clang). Then:</p>
 <pre><code class="lang-text">cd caveman-code
-python -m cmc                       # talk to CMC in the terminal
-python -m cmc run examples/01_hello_oga.cmc
-python -m ogabooga                  # open the IDE</code></pre>
-<p>The commands need <code>src</code> on the import path. Two ways:</p>
-<pre><code class="lang-text"># Windows PowerShell
-$env:PYTHONPATH = &quot;src&quot;
-
-# macOS / Linux
-export PYTHONPATH=src</code></pre>
-<p>Or install it as a normal Python package, which creates the <code>cmc</code> and <code>ogabooga</code> commands:</p>
-<pre><code class="lang-text">pip install .
-cmc version
-ogabooga</code></pre>
+native\build.bat                    # builds bin\cmc.exe and bin\ogabooga.exe
+bin\cmc.exe                         # talk to CMC in the terminal
+bin\cmc.exe run examples\01_hello_oga.cmc
+bin\ogabooga.exe                    # open the IDE</code></pre>
+<p>On macOS or Linux use the same g++ command found in <code>native\build.bat</code>. The compiler and REPL build anywhere; the IDE and its drawing window need Windows.</p>
 <h2>Checking it works</h2>
 <pre><code class="lang-cmc">oga &quot;hello cave&quot;</code></pre>
 <p>Save that as <code>hello.cmc</code> and run it:</p>
-<pre><code class="lang-text">cmc run hello.cmc</code></pre>
+<pre><code class="lang-text">bin\cmc.exe run hello.cmc</code></pre>
 <p>You should see:</p>
 <pre><code class="lang-text">hello cave</code></pre>
 <p>If you do, welcome to the cave. Go try the <a href="tutorial.html">tutorial</a>.</p>
-<h2>Making a stand-alone .exe (optional)</h2>
-<p>If you want to share CMC with someone who does not have Python, the repo has a PyInstaller script:</p>
-<pre><code class="lang-text">pip install pyinstaller
-powershell -File tools/build_exe.ps1</code></pre>
-<p>This makes <code>OgaboogaCoder.exe</code> (the IDE) and <code>cmc.exe</code> (the compiler). It takes a couple of minutes the first time.</p>
+<h2>Building stand-alone programs (optional)</h2>
+<p><code>native\build.bat</code> already makes two stand-alone programs with no dependencies. Share the whole folder (or a zip) and the other person can double-click the launchers right away.</p>
 <h2>Troubleshooting installs</h2>
-<ul><li><strong>"python is not recognized"</strong> -- Python is not on the PATH. Reinstall</li></ul>
-<p>Python and tick <em>Add Python to PATH</em>.</p>
-<ul><li><strong>A window does not appear</strong> -- you may be on a computer with no desktop.</li></ul>
-<p>The <code>cmc run</code> command works without the IDE.</p>
-<ul><li><strong>"No module named tkinter"</strong> -- on Linux install it with</li></ul>
-<p><code>sudo apt install python3-tk</code>.</p>
+<ul><li><strong>"cmc.exe is not recognized"</strong> -- run it with its path: <code>bin\cmc.exe</code>.</li></ul>
+<ul><li><strong>The launcher says the compiler is not built</strong> -- run <code>native\build.bat</code> first (you need g++ or clang).</li></ul>
+<ul><li><strong>A window does not appear</strong> -- you may be on a computer with no desktop. <code>bin\cmc.exe run</code> works without the IDE.</li></ul>
 </main>
 </div>
 <footer class="footer">

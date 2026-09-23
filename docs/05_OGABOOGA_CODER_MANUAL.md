@@ -4,8 +4,8 @@ OGABOOGA CODER is the official CMC editor, and the compiler lives inside it.
 One window, no installs, no accounts, no internet.
 
 ```text
-python -m ogabooga          open it
-python -m ogabooga --selftest   check that it works, then exit
+bin\ogabooga.exe          open it
+bin\ogabooga.exe --selftest   check that it works, then exit
 ```
 
 ## 1. The window at a glance
@@ -119,7 +119,7 @@ Example programs are read-only friends: use **Save as** to keep your changes.
 
 **Export .py** compiles the current tab to standalone Python. The generated
 file contains a readable copy of the CMC runtime and your program translated
-line for line. It runs anywhere Python 3.9+ runs:
+line for line. It runs anywhere Windows 10+ runs:
 
 ```text
 python my_program.py
@@ -171,7 +171,7 @@ There is no second copy of the language: pressing RUN runs exactly what
 ## 14. The self test
 
 ```text
-python -m ogabooga --selftest
+bin\ogabooga.exe --selftest
 ```
 
 Builds the whole window without showing it, runs a program through the

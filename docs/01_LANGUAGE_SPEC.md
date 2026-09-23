@@ -33,8 +33,8 @@ first-time programmers, especially young children. Its design goals, in order:
    concrete hint.
 3. **Real capability.** The language is not a toy subset: it has lists,
    functions, recursion, string processing, random numbers, and drawing.
-4. **Zero dependencies.** The reference implementation runs on a bare Python
-   3.9+ installation.
+4. **Zero dependencies.** The reference implementation is plain C++ (C++17)
+   with no libraries to install.
 
 The reference implementation consists of a lexer, a recursive-descent parser,
 a tree-walking interpreter, and a source-to-source compiler that emits Python.
@@ -184,7 +184,7 @@ Notes:
 
 ## 5. Values and types
 
-| Type name (`what`) | Python type | Literal / producer |
+| Type name (`what`) | C++ type | Literal / producer |
 | --- | --- | --- |
 | `number` | `int`, `float` | number literals, math |
 | `text` | `str` | quoted text, `goop` |

@@ -14,7 +14,7 @@ Time needed: about 15 minutes, plus a little waiting for uploads.
 | A GitHub account | the home for the project | github.com/join |
 | Git | uploads your files | `git --version` |
 | GitHub CLI (`gh`) | creates the repo in one command | `gh --version` |
-| Python 3.9+ | builds docs, site, zips | `python --version` |
+| Windows 10+ | builds docs, site, zips | `python --version` |
 
 Install GitHub CLI: `winget install GitHub.cli` (Windows),
 `brew install gh` (macOS), or see cli.github.com for Linux.
@@ -29,7 +29,7 @@ otherwise. On Windows, use **PowerShell**.
 ### 1.1 Check the tests pass
 
 ```text
-python -m unittest discover -s tests -t .
+powershell -File native\tests\run_tests.ps1
 ```
 
 You should see `OK`. If not, fix that first -- a repo that fails its own tests
@@ -264,7 +264,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Tests
-        run: python -m unittest discover -s tests -t .
+        run: powershell -File native\tests\run_tests.ps1
       - name: Docs and site
         run: |
           python tools/write_docs.py
@@ -289,7 +289,7 @@ Note: `tools/build_release.ps1` is PowerShell. For the Linux runner, a tiny
 
 ```text
 # edit files...
-python -m unittest discover -s tests -t .
+powershell -File native\tests\run_tests.ps1
 python tools/build_site.py --check
 git add .
 git commit -m "Add a new example about boats"

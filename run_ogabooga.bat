@@ -2,8 +2,11 @@
 rem OGABOOGA CODER launcher -- double-click me!
 setlocal
 cd /d "%~dp0"
-set "PYTHONPATH=%~dp0src"
-set "PY=python"
-where python >nul 2>nul || set "PY=py -3"
-%PY% -m ogabooga
+if not exist "bin\ogabooga.exe" (
+    echo OGABOOGA CODER is not built yet.
+    echo Build it with:  native\build.bat
+    pause
+    exit /b 1
+)
+"bin\ogabooga.exe"
 if errorlevel 1 pause

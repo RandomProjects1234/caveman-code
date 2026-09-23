@@ -63,8 +63,8 @@ valuable design feedback.
   capable.
 - **One idea per line.** In code and in explanations.
 - **Explain WHY.** Comments and docs explain reasons, not mechanics.
-- **Test everything.** `python -m unittest discover -s tests -t .` must pass.
-- **No new dependencies.** CMC runs on a bare Python install. Pull requests
+- **Test everything.** `powershell -File native\tests\run_tests.ps1` must pass.
+- **No new dependencies.** CMC is plain C++ (C++17) install. Pull requests
   that add packages will be asked to remove them.
 
 ## The setup
@@ -73,9 +73,9 @@ valuable design feedback.
 git clone https://github.com/your-name/caveman-code
 cd caveman-code
 set PYTHONPATH=src
-python -m cmc run examples/01_hello_oga.cmc
-python -m ogabooga
-python -m unittest discover -s tests -t .
+bin\cmc.exe run examples/01_hello_oga.cmc
+bin\ogabooga.exe
+powershell -File native\tests\run_tests.ps1
 ```
 
 To rebuild the website:

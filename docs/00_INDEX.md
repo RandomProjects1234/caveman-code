@@ -37,13 +37,14 @@ booga rocks
 unga
 ```
 
-The compiler lives in `src/cmc/`, the IDE in `src/ogabooga/`, examples in
-`examples/`, and the tests in `tests/`.
+The compiler lives in `native/src/engine/`, the command line in
+`native/src/cli/`, the IDE in `native/src/ide/`, examples in `examples/`,
+and the tests in `native/tests/`.
 
 ```text
-python -m unittest discover -s tests -t .     run everything
-python -m ogabooga                            open the IDE
-python -m cmc run examples/15_fizzbuzz.cmc    run an example
-python tools/build_site.py --check            rebuild the website
-python tools/build_release.ps1                make the download zips
+native\build.bat                                   build bin\cmc.exe and bin\ogabooga.exe
+powershell -File native\tests\run_tests.ps1        run everything
+bin\ogabooga.exe                                   open the IDE
+bin\cmc.exe run examples\15_fizzbuzz.cmc           run an example
+powershell -File tools\build_release.ps1           make the download zips
 ```

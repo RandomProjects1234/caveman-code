@@ -109,15 +109,16 @@ enough -- this page is for teachers, or for reading with a cup of tea.
 | OGABOOGA CODER | red text in the output panel, with a line number |
 | `cmc run` | the error on stderr, exit code 1 |
 | `cmc` REPL | the error printed, and the session continues |
-| Python API | a `cmc.CmcError` exception with `.message`, `.line`, `.hint` |
+| C++ API | a `cmc::CmcError` exception with `.message`, `.line`, `.hint` |
 
 ## Writing tests for errors
 
-```python
-import cmc
-try:
-    cmc.run_source("oga 1 / 0")
-except cmc.CmcError as error:
-    assert "share by zero" in error.message
-    assert error.hint
+```cpp
+try {
+    cmc::Interpreter interpreter;
+    interpreter.run("oga 1 / 0");
+} catch (cmc::CmcError& error) {
+    assert(error.message.find("share by zero") != std::string::npos);
+    assert(!error.hint.empty());
+}
 ```

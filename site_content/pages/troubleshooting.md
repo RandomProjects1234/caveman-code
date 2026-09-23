@@ -10,25 +10,21 @@ The window may open and close too fast to read. Run it from a terminal:
 powershell -File run_ogabooga.bat
 ```
 
-The error will stay on screen. Usually it is Python missing from PATH.
+The error will stay on screen. Usually the programs have not been built yet.
 
-### `python is not recognized`
+### `cmc.exe is not recognized`
 
-Python is not installed, or not on the PATH. Reinstall Python from
-python.org and tick **Add Python to PATH**.
-
-### `ModuleNotFoundError: No module named 'cmc'`
-
-You are running from the wrong folder, or `src` is not on the import path.
+You are not in the package folder, or the programs have not been built.
+Run it with its path (`bin\cmc.exe`) or build it first:
 
 ```text
-# from the repo folder
-set PYTHONPATH=src          (Windows cmd)
-$env:PYTHONPATH = "src"     (PowerShell)
-export PYTHONPATH=src       (macOS/Linux)
+native\build.bat
 ```
 
-Or install it: `pip install .`
+### The launcher says the compiler is not built
+
+Run `native\build.bat` (you need g++ or clang). The built programs land in
+`bin\`.
 
 ## The window is open but weird
 

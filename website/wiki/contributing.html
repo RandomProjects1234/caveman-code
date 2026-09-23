@@ -101,15 +101,15 @@ unga</code></pre>
 <h2>House style</h2>
 <ul><li><strong>Kindness first.</strong> Errors, docs, and messages should make a beginner feel</li></ul>
 <p>capable.</p>
-<ul><li><strong>One idea per line.</strong> In code and in explanations.</li><li><strong>Explain WHY.</strong> Comments and docs explain reasons, not mechanics.</li><li><strong>Test everything.</strong> <code>python -m unittest discover -s tests -t .</code> must pass.</li><li><strong>No new dependencies.</strong> CMC runs on a bare Python install. Pull requests</li></ul>
+<ul><li><strong>One idea per line.</strong> In code and in explanations.</li><li><strong>Explain WHY.</strong> Comments and docs explain reasons, not mechanics.</li><li><strong>Test everything.</strong> <code>powershell -File native\tests\run_tests.ps1</code> must pass.</li><li><strong>No new dependencies.</strong> CMC is plain C++ (C++17) install. Pull requests</li></ul>
 <p>that add packages will be asked to remove them.</p>
 <h2>The setup</h2>
 <pre><code class="lang-text">git clone https://github.com/your-name/caveman-code
 cd caveman-code
 set PYTHONPATH=src
-python -m cmc run examples/01_hello_oga.cmc
-python -m ogabooga
-python -m unittest discover -s tests -t .</code></pre>
+bin\cmc.exe run examples/01_hello_oga.cmc
+bin\ogabooga.exe
+powershell -File native\tests\run_tests.ps1</code></pre>
 <p>To rebuild the website:</p>
 <pre><code class="lang-text">python tools/build_site.py --check</code></pre>
 <h2>Pull request checklist</h2>

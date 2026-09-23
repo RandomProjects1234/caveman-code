@@ -92,10 +92,10 @@
 <p>Not yet. It runs on Windows, macOS, and Linux desktops and laptops. A browser version is on the <a href="roadmap.html">roadmap</a>.</p>
 <h2>Can CMC make real games?</h2>
 <p>Small ones, yes -- text adventures, guessing games, drawing toys, and simple animations with <code>wait</code> and <code>skrib</code>. Full graphics games would need more library work; that is part of what "hard to master" means.</p>
-<h2>Why Python underneath?</h2>
-<p>Python is already installed on millions of computers, reads like English, and lets <code>cmc compile</code> produce code a learner can grow into. CMC is also small enough that a future version could target other machines.</p>
-<h2>Is CMC just a Python wrapper?</h2>
-<p>No. It has its own grammar (<code>unga</code> blocks, <code>skrib</code> statements, friendly checks) and its own runtime rules (whole-number division, friendly step limits, type-aware errors). The interpreter is written in Python, the same way many languages are written in C.</p>
+<h2>Why C++ underneath?</h2>
+<p>C++ builds one tiny stand-alone program with no runtime to install, and lets <code>cmc compile</code> produce code a learner can grow into. CMC is also small enough that a future version could target other machines.</p>
+<h2>Is CMC a real language?</h2>
+<p>No. It has its own grammar (<code>unga</code> blocks, <code>skrib</code> statements, friendly checks) and its own runtime rules (whole-number division, friendly step limits, type-aware errors). The interpreter is written in C++, the same way many languages are written in C.</p>
 <h2>Can I mix CMC and Python?</h2>
 <p>Through the compiler: <code>cmc compile hello.cmc</code> makes readable Python. CMC programs cannot import Python libraries directly in v0.1 -- that is on the roadmap.</p>
 <h2>Why are lists called piles and booleans called gronk?</h2>
