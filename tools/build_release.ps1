@@ -24,33 +24,33 @@ Everything here is built with C++.  You do not need Python.
 
 QUICK START
 -----------
-1. Double-click  run_ogabooga.bat  to open OGABOOGA CODER
-   (the friendly block + text coding cave).
+1. Double-click  OGABOOGA CODER.exe  to open the friendly
+   block + text coding cave.
 
-2. Or drag any .cmc file onto  cmc_run.bat  to run it.
-   Double-click cmc_run.bat with no file to talk to CMC
+2. To run a program, drag any .cmc file onto  cmc.exe .
+   Double-click cmc.exe with no file to talk to CMC
    line by line (the REPL).
 
-3. The programs live in  bin\ :
-      bin\ogabooga.exe   the IDE
-      bin\cmc.exe        the compiler and runner
+3. Both programs live right here:
+      OGABOOGA CODER.exe   the IDE
+      cmc.exe              the compiler and runner
 
 BUILD IT YOURSELF (optional)
 ----------------------------
-You need a C++17 compiler (g++ or clang).  Then run:
+You need a C++17 compiler (g++ or clang).  The full package
+includes the source in  native\ .  Then run:
 
       native\build.bat
 
-That builds both programs into  bin\ .
-
 WHAT IS WHERE
 -------------
-  bin\          the built programs
-  native\       the C++ source and build files
-  examples\     example .cmc programs
-  docs\         the manual, tutorial, and language spec
-  website\      the offline wiki (open website\index.html)
-  tests\        (full package) test scripts
+  OGABOOGA CODER.exe   the IDE
+  cmc.exe              the compiler and runner
+  examples\            example .cmc programs
+  docs\                the manual, tutorial, and language spec
+  website\             the offline wiki (open website\index.html)
+  native\              (full package) the C++ source and build files
+  tools\               (full package) release builder
 
 LEARN CMC
 ---------
@@ -60,8 +60,7 @@ MIT License.  Go make something silly.
 "@
 Set-Content -Path (Join-Path $stage "START_HERE.txt") -Value $startHere -Encoding UTF8
 
-$commonFiles = @("README.md", "LICENSE", "CHEATSHEET.md", "cmc_run.bat", "run_ogabooga.bat",
-                 "START_HERE.txt")
+$commonFiles = @("README.md", "LICENSE", "CHEATSHEET.md", "START_HERE.txt")
 
 function Stage-Package {
     param(
@@ -77,6 +76,8 @@ function Stage-Package {
         if (-not (Test-Path $source)) { $source = Join-Path $stage $file }
         Copy-Item $source (Join-Path $target $file) -Force
     }
+    Copy-Item (Join-Path $root "bin\ogabooga.exe") (Join-Path $target "OGABOOGA CODER.exe") -Force
+    Copy-Item (Join-Path $root "bin\cmc.exe") (Join-Path $target "cmc.exe") -Force
     foreach ($dir in $Directories) {
         $source = Join-Path $root $dir
         if (Test-Path $source) {
@@ -98,20 +99,19 @@ function Stage-Package {
 }
 
 Stage-Package -Name ("CaveManCode-v" + $version) `
-    -Directories @("bin", "native", "examples", "docs", "tools", "site_content", "website") `
+    -Directories @("native", "examples", "docs", "tools", "site_content", "website") `
     -Files $commonFiles `
     -RemovePaths @("website\downloads", "native\cli_sources.rsp", "native\ide_sources.rsp")
 
 Stage-Package -Name ("CMC-Compiler-v" + $version) `
-    -Directories @("bin", "native", "examples", "docs", "website") `
+    -Directories @("examples", "docs", "website") `
     -Files $commonFiles `
-    -RemovePaths @("website\downloads", "bin\ogabooga.exe", "native\cli_sources.rsp",
-                   "native\ide_sources.rsp")
+    -RemovePaths @("website\downloads")
 
 Stage-Package -Name ("OGABOOGA-CODER-v" + $version) `
-    -Directories @("bin", "native", "examples", "docs", "website") `
+    -Directories @("examples", "docs", "website") `
     -Files $commonFiles `
-    -RemovePaths @("website\downloads", "native\cli_sources.rsp", "native\ide_sources.rsp")
+    -RemovePaths @("website\downloads")
 
 $downloads = Join-Path $root "website\downloads"
 New-Item -ItemType Directory -Force -Path $downloads | Out-Null

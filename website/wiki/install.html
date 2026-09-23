@@ -78,15 +78,15 @@
 <main class="content">
 <p>Cave Man Code is tiny and free. Everything is built in C++ with no dependencies -- the compiler, the IDE, and the tests.</p>
 <h2>Option 1: The zip (easiest)</h2>
-<ol><li>Go to the <a href="../download.html">download page</a>.</li><li>Download <strong>CMC-Compiler-v0.1.0.zip</strong> or the all-in-one zip.</li><li>Right-click the zip and choose <strong>Extract All</strong>.</li><li>Open the folder and double-click <code>run_ogabooga.bat</code> (the IDE) or <code>cmc_run.bat</code> (the terminal runner).</li></ol>
-<p>That is it. Nothing else to install. The programs are already built: <code>bin\cmc.exe</code> (compiler, runner, and REPL) and <code>bin\ogabooga.exe</code> (the IDE).</p>
+<ol><li>Go to the <a href="../download.html">download page</a>.</li><li>Download <strong>CMC-Compiler-v0.1.0.zip</strong> or the all-in-one zip.</li><li>Right-click the zip and choose <strong>Extract All</strong>.</li><li>Open the folder and double-click <code>OGABOOGA CODER.exe</code> (the IDE). To run a program, drag a <code>.cmc</code> file onto <code>cmc.exe</code>.</li></ol>
+<p>That is it. Nothing else to install. The programs are already in the folder: <code>cmc.exe</code> (compiler, runner, and REPL) and <code>OGABOOGA CODER.exe</code> (the IDE).</p>
 <h2>Option 2: Build it from the repo (for tinkerers)</h2>
 <p>You need a C++17 compiler (g++ or clang). Then:</p>
 <pre><code class="lang-text">cd caveman-code
-native\build.bat                    # builds bin\cmc.exe and bin\ogabooga.exe
+native\build.bat                    # builds bin\cmc.exe and OGABOOGA CODER.exe
 bin\cmc.exe                         # talk to CMC in the terminal
-bin\cmc.exe run examples\01_hello_oga.cmc
-bin\ogabooga.exe                    # open the IDE</code></pre>
+cmc.exe run examples\01_hello_oga.cmc
+OGABOOGA CODER.exe                    # open the IDE</code></pre>
 <p>On macOS or Linux use the same g++ command found in <code>native\build.bat</code>. The compiler and REPL build anywhere; the IDE and its drawing window need Windows.</p>
 <h2>Checking it works</h2>
 <pre><code class="lang-cmc">oga &quot;hello cave&quot;</code></pre>
@@ -98,9 +98,10 @@ bin\ogabooga.exe                    # open the IDE</code></pre>
 <h2>Building stand-alone programs (optional)</h2>
 <p><code>native\build.bat</code> already makes two stand-alone programs with no dependencies. Share the whole folder (or a zip) and the other person can double-click the launchers right away.</p>
 <h2>Troubleshooting installs</h2>
-<ul><li><strong>"cmc.exe is not recognized"</strong> -- run it with its path: <code>bin\cmc.exe</code>.</li></ul>
-<ul><li><strong>The launcher says the compiler is not built</strong> -- run <code>native\build.bat</code> first (you need g++ or clang).</li></ul>
-<ul><li><strong>A window does not appear</strong> -- you may be on a computer with no desktop. <code>bin\cmc.exe run</code> works without the IDE.</li></ul>
+<ul><li><strong>"cmc.exe is not recognized"</strong> -- run it with its path or from the package folder: <code>cmc.exe</code>.</li></ul>
+<ul><li><strong>The programs are not built</strong> -- the zip already contains <code>cmc.exe</code> and <code>OGABOOGA CODER.exe</code>. If you are running from the repo, run <code>native\build.bat</code> first.</li></ul>
+<ul><li><strong>A window does not appear</strong> -- you may be on a computer with no desktop. <code>cmc.exe run</code> works without the IDE.</li></ul>
+<ul><li><strong>Antivirus warning</strong> -- CMC is not code-signed yet, so Windows Defender's machine-learning heuristic can flag a fresh download by mistake. It is a false positive: the full C++ source is in the zip. Please report it to Microsoft as a false positive at <a href="https://www.microsoft.com/en-us/wdsi/filesubmission" target="_blank" rel="noopener">the Microsoft file submission page</a> so the warning stops for everyone.</li></ul>
 </main>
 </div>
 <footer class="footer">

@@ -89,22 +89,22 @@ OGABOOGA CODER, all examples, and the docs.</p>
 <h2>How to install (Windows)</h2>
 <pre><code>1. Download a zip above and right-click -> Extract All...
 2. Open the extracted folder.
-3. Double-click run_ogabooga.bat  (or cmc_run.bat to run programs in a terminal)</code></pre>
+3. Double-click OGABOOGA CODER.exe  (or drag a .cmc file onto cmc.exe)</code></pre>
 <h2>How to build from source</h2>
 <pre><code>unzip CMC-Compiler-v0.1.0.zip
 cd caveman-code
 native\build.bat
-bin\cmc.exe run examples\01_hello_oga.cmc
-bin\ogabooga.exe</code></pre>
+cmc.exe run examples\01_hello_oga.cmc
+OGABOOGA CODER.exe</code></pre>
 <h2>What is inside</h2>
 <table>
 <thead><tr><th>File</th><th>What it does</th></tr></thead>
 <tbody>
-<tr><td>bin/cmc.exe</td><td>the compiler, runner, and REPL</td></tr>
-<tr><td>bin/ogabooga.exe</td><td>OGABOOGA CODER, the IDE with the compiler inside</td></tr>
-<tr><td>native/</td><td>the C++ source (engine, CLI, IDE) and build scripts</td></tr>
-<tr><td>run_ogabooga.bat</td><td>starts the IDE on Windows</td></tr>
-<tr><td>cmc_run.bat</td><td>drag any .cmc file onto it to run it</td></tr>
+<tr><td>cmc.exe</td><td>the compiler, runner, and REPL</td></tr>
+<tr><td>OGABOOGA CODER.exe</td><td>OGABOOGA CODER, the IDE with the compiler inside</td></tr>
+<tr><td>native/</td><td>the C++ source and build scripts (full package)</td></tr>
+
+
 <tr><td>examples/</td><td>31 example programs from hello world to recursion</td></tr>
 <tr><td>docs/</td><td>the full manual</td></tr>
 </tbody>
@@ -120,6 +120,15 @@ g++ or clang:</p>
 <li>No runtime to install -- the programs are self-contained</li>
 <li>About 10 MB of space, no internet needed after download</li>
 </ul>
+<h2>A note about antivirus warnings</h2>
+<p>CMC is a small open-source project, and the programs are not code-signed yet.
+Antivirus tools (especially Windows Defender's machine-learning heuristic) can
+sometimes flag freshly built programs by mistake. If that happens to you, it is
+a false positive: the full C++ source is in the zip and in the repository, and
+you can check it yourself. You can help everyone by reporting the file to
+Microsoft as a false positive at the
+<a href="https://www.microsoft.com/en-us/wdsi/filesubmission" target="_blank" rel="noopener">Microsoft file submission page</a>.
+Thank you!</p>
 
 </main>
 </div>

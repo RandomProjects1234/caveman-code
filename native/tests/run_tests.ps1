@@ -7,7 +7,9 @@ $ErrorActionPreference = "Stop"
 $testsDir = $PSScriptRoot
 $root = Split-Path -Parent (Split-Path -Parent $testsDir)
 $exe = Join-Path $root "bin\cmc.exe"
+if (-not (Test-Path $exe)) { $exe = Join-Path $root "cmc.exe" }
 $ide = Join-Path $root "bin\ogabooga.exe"
+if (-not (Test-Path $ide)) { $ide = Join-Path $root "OGABOOGA CODER.exe" }
 $examples = Join-Path $root "examples"
 $expectedDir = Join-Path $testsDir "expected"
 New-Item -ItemType Directory -Force -Path $expectedDir | Out-Null

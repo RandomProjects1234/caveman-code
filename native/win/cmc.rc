@@ -1,0 +1,29 @@
+#include <winver.h>
+
+1 VERSIONINFO
+FILEVERSION 0,1,0,0
+PRODUCTVERSION 0,1,0,0
+FILEOS 0x40004
+FILETYPE VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Cave Man Code contributors"
+            VALUE "FileDescription", "CMC - Cave Man Code compiler, runner, and REPL"
+            VALUE "FileVersion", "0.1.0.0"
+            VALUE "InternalName", "cmc"
+            VALUE "LegalCopyright", "MIT License"
+            VALUE "OriginalFilename", "cmc.exe"
+            VALUE "ProductName", "Cave Man Code (CMC)"
+            VALUE "ProductVersion", "0.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+1 24 "cmc.manifest"

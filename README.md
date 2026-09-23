@@ -30,9 +30,9 @@ drawing.
 Grab a zip from the [download page](website/download.html) (or the
 `website/downloads/` folder in a fresh checkout), unzip it, and:
 
-- **Windows:** double-click `run_ogabooga.bat` (the IDE) or drag a `.cmc`
-  file onto `cmc_run.bat` (the runner)
-- **Terminal:** `bin\cmc.exe run examples\01_hello_oga.cmc`
+- **Windows:** double-click `OGABOOGA CODER.exe` (the IDE) or drag a `.cmc`
+  file onto `cmc.exe` (the runner)
+- **Terminal:** `cmc.exe run examples\01_hello_oga.cmc`
 
 Everything is built in C++ with no dependencies. Nothing else to install.
 To build it yourself with g++ or clang, run `native\build.bat`.
@@ -113,7 +113,7 @@ bin\cmc.exe run hello.cmc       run a program
 bin\cmc.exe compile hello.cmc   make hello.py
 bin\cmc.exe init hello.cmc      make a starter program
 bin\cmc.exe examples            list example programs
-bin\ogabooga.exe                open the IDE
+OGABOOGA CODER.exe                open the IDE
 native\build.bat                build both programs with g++
 powershell -File native\tests\run_tests.ps1     run the test suite
 powershell -File tools\build_release.ps1        build the download zips
