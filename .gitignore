@@ -11,4 +11,4 @@ venv/
 .vscode/
 .DS_Store
 Thumbs.db
-*.cmcsnap
+*.cmcsnapnode_modules/

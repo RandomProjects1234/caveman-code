@@ -1,0 +1,157 @@
+[
+    {
+        "name":  "01_hello_oga",
+        "file":  "01_hello_oga.cmc",
+        "source":  "ugg The first program every cave coder writes.\noga \"Ooga booga! Hello cave!\"\noga \"Me name CMC. Me happy.\""
+    },
+    {
+        "name":  "02_boxes_grunk",
+        "file":  "02_boxes_grunk.cmc",
+        "source":  "ugg Boxes remember things.\ngrunk name = \"Ugg\"\ngrunk rocks = 3\n\noga name, \"has\", rocks, \"rocks\"\n\nrocks = rocks + 1\noga \"Now\", name, \"has\", rocks, \"rocks\"\n\ngrunk favorite = \"big shiny rock\"\noga name + \"\u0027s favorite is \" + favorite"
+    },
+    {
+        "name":  "03_squish_numbers",
+        "file":  "03_squish_numbers.cmc",
+        "source":  "ugg Numbers and math helpers.\ngrunk a = 7\ngrunk b = 2\n\noga \"a + b =\", a + b\noga \"a - b =\", a - b\noga \"a * b =\", a * b\noga \"a / b =\", a / b\noga \"a % b =\", a % b\n\noga \"big:\", big(a, b)\noga \"small:\", small(a, b)\noga \"rounded:\", round(3.7)\noga \"flat:\", flat(3.7)\noga \"roof:\", roof(3.2)\noga \"abs:\", abs(0 - 9)\noga \"root of 81:\", root(81)\noga \"2 to the 3:\", pow(2, 3)"
+    },
+    {
+        "name":  "04_binga_if",
+        "file":  "04_binga_if.cmc",
+        "source":  "ugg binga asks a yes-or-no question.\ngrunk rocks = 5\n\nbinga rocks \u003e 3\n    oga \"That is a lot of rocks!\"\nunga\n\nbinga rocks == 5\n    oga \"Exactly five rocks.\"\nunga\n\nbinga rocks \u003c 3\n    oga \"Not many rocks.\"\nunga\n\noga \"The check is done.\""
+    },
+    {
+        "name":  "05_wonga_else",
+        "file":  "05_wonga_else.cmc",
+        "source":  "ugg wonga is what to do when the check is not gronk.\ngrunk door = \"open\"\n\nbinga door == \"open\"\n    oga \"Walk right in!\"\nwonga\n    oga \"Knock first.\"\nunga\n\ngrunk age = 7\nbinga age \u003e 10\n    oga \"Big kid!\"\nwonga binga age \u003e 5\n    oga \"Medium kid!\"\nwonga\n    oga \"Small kid!\"\nunga"
+    },
+    {
+        "name":  "06_booga_repeat",
+        "file":  "06_booga_repeat.cmc",
+        "source":  "ugg booga does things many times.\nbooga 3\n    oga \"BOOGA!\"\nunga\n\ngrunk n = 1\nbooga 4\n    oga \"lap number\", n\n    n = n + 1\nunga\n\nugg The magic box \u0027lap\u0027 knows which lap you are on.\nbooga 2\n    oga \"this is lap\", lap\nunga\n\nbooga 2 + 3\n    oga \"five laps!\"\nunga"
+    },
+    {
+        "name":  "07_zug_while",
+        "file":  "07_zug_while.cmc",
+        "source":  "ugg zug keeps going while the check stays gronk.\ngrunk fuel = 3\n\nzug fuel \u003e 0\n    oga \"Zoom! fuel left:\", fuel\n    fuel = fuel - 1\nunga\n\noga \"Out of fuel.\"\n\ngrunk count = 0\nzug count \u003c 5\n    count = count + 1\nunga\noga \"Counted to\", count"
+    },
+    {
+        "name":  "08_zoop_each",
+        "file":  "08_zoop_each.cmc",
+        "source":  "ugg zoop walks through a pile one thing at a time.\ngrunk pets = snorf(\"dog\", \"cat\", \"rock\")\n\nzoop pet in pets\n    oga \"I love my\", pet\nunga\n\nugg Text is a pile of letters too.\ngrunk word = \"cave\"\nzoop letter in word\n    oga \"letter:\", letter\nunga"
+    },
+    {
+        "name":  "09_clump_functions",
+        "file":  "09_clump_functions.cmc",
+        "source":  "ugg clump makes your own words.\nclump greet(name)\n    oga \"Hello \" + name + \"!\"\nunga\n\nclump cheer()\n    oga \"BOOGA BOOGA BOOGA\"\nunga\n\ngreet(\"Ugg\")\ngreet(\"Oona\")\ncheer()"
+    },
+    {
+        "name":  "10_ork_return",
+        "file":  "10_ork_return.cmc",
+        "source":  "ugg ork gives an answer back from a clump.\nclump add(a, b)\n    ork a + b\nunga\n\nclump double(n)\n    ork n * 2\nunga\n\nclump shout_name(name)\n    ork shout(name) + \"!\"\nunga\n\noga add(2, 3)\noga double(add(1, 4))\noga shout_name(\"ugg\")"
+    },
+    {
+        "name":  "11_piles_snorf",
+        "file":  "11_piles_snorf.cmc",
+        "source":  "ugg Piles hold lots of things in order.\ngrunk bag = snorf()\nplop(bag, \"apple\")\nplop(bag, \"rock\")\nplop(bag, \"banana\")\n\noga bag\noga \"how many:\", nom(bag)\noga \"first:\", skoop(bag, 0)\noga \"last:\", bag[-1]\n\ngrunk taken = yoink(bag)\noga \"I yoinked\", taken\noga bag\n\nbag[0] = \"golden apple\"\noga bag"
+    },
+    {
+        "name":  "12_text_goop",
+        "file":  "12_text_goop.cmc",
+        "source":  "ugg Text helpers: goop, shout, whisper, flip, split, join, what.\ngrunk rocks = 7\n\noga \"I am \" + goop(rocks) + \" years old\"\noga shout(\"ugg\")\noga whisper(\"VERY LOUD\")\noga flip(\"booga\")\noga \"length of cave:\", nom(\"cave\")\noga \"find man in caveman:\", find(\"caveman\", \"man\")\noga \"find z in caveman:\", find(\"caveman\", \"z\")\noga split(\"rock,paper,scissors\", \",\")\noga join(snorf(1, 2, 3), \" -\u003e \")\noga what(3), what(\"hi\"), what(gronk), what(plop)"
+    },
+    {
+        "name":  "13_blorp_ask",
+        "file":  "13_blorp_ask.cmc",
+        "source":  "ugg blorp asks the person a question.\ngrunk name = blorp \"What is your name?\"\ngrunk color = blorp \"What is your favorite color?\"\n\noga \"Hello \" + name + \"!\"\noga color + \" is a great color.\""
+    },
+    {
+        "name":  "14_random_munga",
+        "file":  "14_random_munga.cmc",
+        "source":  "ugg munga makes magic random numbers.\nugg munga(1, 1) is always 1, so this example gives the same answer every time.\ngrunk dice = munga(1, 1)\noga \"The test dice rolled\", dice\n\ngrunk low = munga(5, 5)\ngrunk high = munga(9, 9)\noga \"low:\", low, \"high:\", high\n\nugg Ask for a different range to make it random for real!"
+    },
+    {
+        "name":  "15_fizzbuzz",
+        "file":  "15_fizzbuzz.cmc",
+        "source":  "ugg FizzBuzz, the famous cave test.\nbooga 15\n    binga lap % 15 == 0\n        oga \"fizzbuzz\"\n    wonga binga lap % 3 == 0\n        oga \"fizz\"\n    wonga binga lap % 5 == 0\n        oga \"buzz\"\n    wonga\n        oga lap\n    unga\nunga"
+    },
+    {
+        "name":  "16_guess_number",
+        "file":  "16_guess_number.cmc",
+        "source":  "ugg no-check -- this is a game for a real person to play!\ngrunk secret = munga(1, 10)\ngrunk tries = 0\ngrunk guess = 0\n\noga \"I am thinking of a number from 1 to 10!\"\n\nzug guess != secret\n    grunk answer = blorp \"Your guess?\"\n    guess = numba(answer)\n    tries = tries + 1\n    binga guess \u003c secret\n        oga \"Bigger!\"\n    wonga binga guess \u003e secret\n        oga \"Smaller!\"\n    unga\nunga\n\noga \"Yes! You got it in\", tries, \"tries.\""
+    },
+    {
+        "name":  "17_drawing_skrib",
+        "file":  "17_drawing_skrib.cmc",
+        "source":  "ugg skrib draws on the picture window (the Draw tab in OGABOOGA CODER).\nskrib size 400, 400\nskrib color \"orange\"\nskrib circle 200, 200, 100\nskrib color \"black\"\nskrib dot 200, 200, 10\nskrib line 0, 0, 400, 400\nskrib box 20, 20, 60, 60\nskrib blob 320, 320, 50, 50\nskrib write \"SUN!\", 175, 320\noga \"Picture done!\""
+    },
+    {
+        "name":  "18_countdown",
+        "file":  "18_countdown.cmc",
+        "source":  "ugg Count down and blast off.\ngrunk n = 5\nzug n \u003e 0\n    oga n\n    n = n - 1\nunga\noga \"Blast off!\""
+    },
+    {
+        "name":  "19_stars_triangle",
+        "file":  "19_stars_triangle.cmc",
+        "source":  "ugg A triangle of stars using a loop inside a loop.\ngrunk n = 1\nzug n \u003c= 5\n    grunk stars = \"\"\n    booga n\n        stars = stars + \"*\"\n    unga\n    oga stars\n    n = n + 1\nunga"
+    },
+    {
+        "name":  "20_grade_calc",
+        "file":  "20_grade_calc.cmc",
+        "source":  "ugg Grades and clumps that give back answers.\ngrunk score = 87\n\nbinga score \u003e= 90\n    oga \"Grade: A\"\nwonga binga score \u003e= 80\n    oga \"Grade: B\"\nwonga binga score \u003e= 70\n    oga \"Grade: C\"\nwonga\n    oga \"Grade: Try again tomorrow\"\nunga\n\nclump grade(score)\n    binga score \u003e= 90\n        ork \"A\"\n    wonga\n        ork \"not A\"\n    unga\nunga\n\noga \"Function says:\", grade(95)"
+    },
+    {
+        "name":  "21_list_stats",
+        "file":  "21_list_stats.cmc",
+        "source":  "ugg Add up a pile and find the biggest thing in it.\ngrunk numbers = snorf(4, 8, 15, 16, 23, 42)\n\ngrunk total = 0\nzoop n in numbers\n    total = total + n\nunga\n\noga \"How many:\", nom(numbers)\noga \"Total:\", total\noga \"Average:\", total / nom(numbers)\n\ngrunk biggest = numbers[0]\nzoop n in numbers\n    binga n \u003e biggest\n        biggest = n\n    unga\nunga\noga \"Biggest:\", biggest"
+    },
+    {
+        "name":  "22_reverse_text",
+        "file":  "22_reverse_text.cmc",
+        "source":  "ugg Turn text around, letter by letter.\nclump reverse(text)\n    grunk out = \"\"\n    grunk i = nom(text) - 1\n    zug i \u003e= 0\n        out = out + skoop(text, i)\n        i = i - 1\n    unga\n    ork out\nunga\n\noga reverse(\"caveman\")\noga reverse(\"booga\")\noga flip(\"oga\")"
+    },
+    {
+        "name":  "23_times_table",
+        "file":  "23_times_table.cmc",
+        "source":  "ugg A little times table made of piles.\ngrunk row = 1\nzug row \u003c= 3\n    grunk parts = snorf()\n    booga 3\n        plop(parts, row * lap)\n    unga\n    oga join(parts, \" \")\n    row = row + 1\nunga"
+    },
+    {
+        "name":  "24_hot_potato",
+        "file":  "24_hot_potato.cmc",
+        "source":  "ugg no-check -- random means the answer changes every run!\ngrunk players = snorf(\"Ugg\", \"Oona\", \"Grog\", \"Zug\")\ngrunk rock = munga(0, nom(players) - 1)\n\noga \"Pass the rock around the circle...\"\noga \"The rock stops with\", players[rock] + \"!\"\noga \"Run it again for a different friend.\""
+    },
+    {
+        "name":  "25_rock_paper_scissors",
+        "file":  "25_rock_paper_scissors.cmc",
+        "source":  "ugg no-check -- a game for a real person!\ngrunk choices = snorf(\"rock\", \"paper\", \"scissors\")\n\noga \"Rock, paper, scissors!\"\ngrunk mine = whisper(blorp \"Your throw?\")\ngrunk theirs = choices[munga(0, 2)]\n\noga \"You threw\", mine\noga \"CMC threw\", theirs\n\nbinga mine == theirs\n    oga \"Tie! Throw again.\"\nwonga binga mine == \"rock\" and theirs == \"scissors\"\n    oga \"You win!\"\nwonga binga mine == \"paper\" and theirs == \"rock\"\n    oga \"You win!\"\nwonga binga mine == \"scissors\" and theirs == \"paper\"\n    oga \"You win!\"\nwonga binga mine == \"rock\" or mine == \"paper\" or mine == \"scissors\"\n    oga \"CMC wins! Try again.\"\nwonga\n    oga \"That is not a real throw. Try rock, paper, or scissors.\"\nunga"
+    },
+    {
+        "name":  "26_fibonacci",
+        "file":  "26_fibonacci.cmc",
+        "source":  "ugg A clump that calls itself: the famous Fibonacci numbers.\nclump fib(n)\n    binga n \u003c 2\n        ork n\n    unga\n    ork fib(n - 1) + fib(n - 2)\nunga\n\nbooga 10\n    oga \"fib\", lap, \"=\", fib(lap - 1)\nunga"
+    },
+    {
+        "name":  "27_turtle_spiral",
+        "file":  "27_turtle_spiral.cmc",
+        "source":  "ugg Draw a spiral with a loop.\nskrib size 400, 400\nskrib color \"purple\"\n\ngrunk x = 200\ngrunk y = 20\n\nbooga 30\n    grunk nx = x + 4 * lap\n    grunk ny = y + 12\n    skrib line x, y, nx, ny\n    x = nx\n    y = ny\n    binga y \u003e 390\n        y = 20\n    unga\nunga\n\noga \"Spiral done!\""
+    },
+    {
+        "name":  "28_word_counter",
+        "file":  "28_word_counter.cmc",
+        "source":  "ugg Count the words in a sentence.\ngrunk sentence = \"the cave man made a big fire\"\ngrunk words = split(sentence, \" \")\ngrunk long_words = 0\n\nzoop word in words\n    binga nom(word) \u003e 3\n        long_words = long_words + 1\n    unga\nunga\n\noga \"Words:\", nom(words)\noga \"Long words:\", long_words"
+    },
+    {
+        "name":  "29_temperature",
+        "file":  "29_temperature.cmc",
+        "source":  "ugg Temperature clumps: math with a purpose.\nclump to_f(c)\n    ork c * 9 / 5 + 32\nunga\n\nclump to_c(f)\n    ork (f - 32) * 5 / 9\nunga\n\noga \"0C is\", to_f(0), \"F\"\noga \"100C is\", to_f(100), \"F\"\noga \"212F is\", to_c(212), \"C\"\noga \"98.6F is\", round(to_c(98.6)), \"C\""
+    },
+    {
+        "name":  "30_cave_painting",
+        "file":  "30_cave_painting.cmc",
+        "source":  "ugg Paint a tiny cave scene.\nskrib size 500, 400\nskrib color \"skyblue\"\nskrib blob 0, 0, 500, 300\nskrib color \"gold\"\nskrib dot 400, 80, 40\nskrib color \"green\"\nskrib blob 0, 300, 500, 100\nskrib color \"brown\"\nskrib blob 150, 200, 120, 130\nskrib color \"black\"\nskrib write \"the first cave painting\", 30, 370\noga \"Cave painting drawn!\""
+    },
+    {
+        "name":  "31_english_aliases",
+        "file":  "31_english_aliases.cmc",
+        "source":  "ugg You can also write CMC with English words.\nlet x = 5\nif x \u003e 3\n    print \"x is big\"\nelse\n    print \"x is small\"\nend\n\nrepeat 2\n    print \"again\"\nend\n\nfunction double(n)\n    return n * 2\nend\n\nprint double(4)\nprint true, false, nothing"
+    }
+]

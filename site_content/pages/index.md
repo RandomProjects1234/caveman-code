@@ -37,7 +37,8 @@ That is already a real program with a loop in it.
 - **Two ways to code.** Drag-and-drop blocks in OGABOOGA CODER, or type the
   words. They are the same language underneath.
 - **Nothing to install.** The compiler and the IDE are C++, and the programs
-  have no dependencies at all.
+  have no dependencies at all. Prefer the browser? Open the
+  [Web IDE](../ide/) and code with the same C++ compiler as WebAssembly.
 
 ## Why is it not a toy?
 

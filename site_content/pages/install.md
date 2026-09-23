@@ -3,6 +3,12 @@
 Cave Man Code is tiny and free. Everything is built in C++ with no
 dependencies -- the compiler, the IDE, and the tests.
 
+## Option 0: The Web IDE (nothing to install)
+
+Open **OGABOOGA CODER WEB** at [`../ide/`](../ide/) -- the full IDE with the
+C++ compiler running in your browser as WebAssembly. Blocks, text editor,
+drawing, and examples all work there with no download.
+
 ## Option 1: The zip (easiest)
 
 1. Go to the [download page](../download.html).

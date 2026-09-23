@@ -3,9 +3,18 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <cstdlib>
 #include <iostream>
 #include <limits>
 #include <thread>
+
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+
+extern "C" {
+void cmc_js_ask_async(const char* prompt, char* buffer, int capacity);
+}
+#endif
 
 #include "builtins.hpp"
 #include "errors.hpp"
@@ -240,6 +249,9 @@ void Interpreter::tick(int line) {
     ++steps_;
     if (steps_ > step_limit_) throw CmcStepLimit(line);
     if (should_stop_ && should_stop_()) throw CmcStopped();
+#ifdef __EMSCRIPTEN__
+    if ((steps_ % 32768) == 0) emscripten_sleep(0);
+#endif
 }
 
 void Interpreter::wait_ms(double ms) {
@@ -247,6 +259,11 @@ void Interpreter::wait_ms(double ms) {
         sleep_(ms / 1000.0);
         return;
     }
+#ifdef __EMSCRIPTEN__
+    if (ms > 0) emscripten_sleep(static_cast<unsigned>(ms));
+    tick();
+    return;
+#else
     auto end = std::chrono::steady_clock::now()
                + std::chrono::microseconds(static_cast<long long>(ms * 1000.0));
     while (std::chrono::steady_clock::now() < end) {
@@ -256,6 +273,7 @@ void Interpreter::wait_ms(double ms) {
         double nap = std::min(0.02, std::max(0.0, remaining));
         std::this_thread::sleep_for(std::chrono::microseconds(static_cast<long long>(nap * 1e6)));
     }
+#endif
 }
 
 void Interpreter::exec_statement(const Stmt* node, Env& env) {
@@ -653,6 +671,12 @@ Value Interpreter::eval_ask(const Ask* node, Env& env) {
         prompt = value.is_text() ? value.as_text() : show(value);
         has_prompt = true;
     }
+#ifdef __EMSCRIPTEN__
+    std::vector<char> answer_buffer(8192, 0);
+    cmc_js_ask_async(has_prompt ? prompt.c_str() : "", answer_buffer.data(),
+                     static_cast<int>(answer_buffer.size()));
+    return Value::text(std::string(answer_buffer.data()));
+#endif
     if (!input_) {
         if (has_prompt && !prompt.empty()) {
             std::cout << prompt << " ";
